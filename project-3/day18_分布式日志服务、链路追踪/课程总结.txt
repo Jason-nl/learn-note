@@ -1,0 +1,75 @@
+1.电商行业的项目架构
+2.企业中的统一异常处理方案
+3.Nginx的反向代理和负载均衡方案
+4.企业中的单标CURD的解决方案：MybatisPlus的基本使用，
+5.企业中的跨域问题的解决方案
+	- CORS解决跨域问题
+	- JsonP解决（了解），利用script标签可以跨域
+6.企业中的分布式文件服务方案
+	- 阿里云文件服务（OSS），学会阅读官方文档
+	- 自己搭建，如：FastDFS、HDFS等分布式存储方案
+7.电商行业的商品设计方案
+	- SPU和SKU概念
+	- 规格参数的设计方案
+	- 表的设计：垂直拆分、横向表变纵向表设计
+8.企业中的搜索解决方案：
+	- elasticsearch的高级用法：自动补全、Nested格式、拼音搜索、模板查询
+	- elasticsearch的基本用法：搜索、聚合
+	- elasticsearch的集群方案
+	- 如何自定义spring boot starter，自定义工具包
+	- elasticsearch数据设计
+9.响应式的Web应用方案：WebFlux异步编程
+10.elasticsearch（或redis）与数据库的双写一致问题，数据同步解决方案：
+	- 利用MQ主动同步
+	- 监听mysql的binLog实现，（Canal框架）
+	- 被动同步，更新时删除缓存，查询时同步缓存
+11.页面静态化解决方案：
+	- 服务端渲染，并保存成静态页面，用户访问时，直接得到静态页面
+	- OpenResty动态模板渲染，静态数据（多级缓存，把数据缓存在OpenResty、Redis）
+		- Lua编程：操作redis、发送http请求、操作mysql、模板渲染
+12.企业短信发送方案：阿里的SMS，异步消息发送
+13.服务端数据校验方案：HibernateValidator
+14.用户信息加密方案：BCryptPasswordEncoder
+15.企业单点登录解决方案：
+	- JWT结合非对称加密：
+	- 共享session解决方案
+	- 跨域登录方案（CAS登录）
+16.企业购物车存储方案：
+	- 本地存储：Localstorage
+	- 服务端存储：MongoDB
+17.线程变量安全问题：ThreadLocal
+18.Spring的Bean加载过程，InitializingBean
+19.下单减库存的安全问题，超卖问题：
+	- 悲观锁：
+		- 分布式锁
+		- 数据库排它锁
+	- 乐观锁
+		- version机制，CAS原理
+20.分布式事务解决方案
+	- 2PC
+	- TCC 补偿型事务
+	- 可靠消息服务
+	- AT模型（Seata）
+21.企业支付方案：微信支付
+22.延迟队列解决方案：
+	- 基于Redis的延迟队列方案
+		- 过期key
+		- SortedSet
+	- 基于JDK的DelayQueue
+	- 基于Quartz
+	- 基于RabbitMQ的死信队列
+23.分布式锁解决方案
+	- 基于redis的分布式锁
+	- 基于zookeeper分布式锁
+	- 基于数据库的分布式锁
+24.企业的分布式日志服务解决方案：
+	- GrayLog方案
+	- ELK方案
+25.企业的APM管理方案（链路追踪、性能监控）
+	- SkyWalking方案
+	- PinPoint方案
+26.企业的数据库集群方案：
+	- 数据库主从集群（读写分离）
+	- 数据库的PXC集群（强一致）
+	- 数据库中间件MyCat（数据分片）
+	- mycat集群，HaProxy
