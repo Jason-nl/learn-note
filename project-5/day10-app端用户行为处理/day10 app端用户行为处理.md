@@ -68,7 +68,7 @@ swagger:
 
 ap_follow_behavior  APP关注行为表
 
-![1586442444126](assets\1586442444126.png)
+![1586442444126](assets/1586442444126.png)
 
 对应实体
 
@@ -135,7 +135,7 @@ ap_behavior_entry 行为实体
 
 行为实体与APP关注行为表是一对多的关系，关注行为需要知道是谁（设备或用户）关注了该文章信息
 
-![1600096344635](assets\1600096344635.png)
+![1600096344635](assets/1600096344635.png)
 
 ![1586237260586](assets/1586237260586.png)
 
@@ -219,7 +219,7 @@ public class ApBehaviorEntry implements Serializable {
 >
 > 2.2 保存数据
 
-![1606400894704](assets\1606400894704.png)
+![1606400894704](assets/1606400894704.png)
 
 #### 1.2.3 功能实现
 
@@ -448,13 +448,13 @@ public class FollowBehaviorListener {
 
 #### 1.3.1 需求分析
 
-![1586443337731](assets\1586443337731.png)
+![1586443337731](assets/1586443337731.png)
 
 当前登录的用户点击了”赞“,就要保存当前行为数据
 
 #### 1.3.2 思路分析
 
-![1586443460411](assets\1586443460411.png)
+![1586443460411](assets/1586443460411.png)
 
 实体类：
 
@@ -793,7 +793,7 @@ public class ApLikesBehaviorController{
 
 ap_read_behavior APP阅读行为表
 
-![1586444602628](assets\1586444602628.png)
+![1586444602628](assets/1586444602628.png)
 
 对应实体：
 
@@ -1037,7 +1037,7 @@ public class ApReadBehaviorController  {
 
 ap_unlikes_behavior APP不喜欢行为表
 
-![1586445655890](assets\1586445655890.png)
+![1586445655890](assets/1586445655890.png)
 
 ```java
 package com.heima.model.behavior.pojo;
@@ -1117,7 +1117,7 @@ public class ApUnlikesBehavior implements Serializable {
 
 如果想修改api接口地址，请打开前端的：heima-leadnews-app\src\common\conf.js文件进行修改
 
-![1586446569391](assets\1586446569391.png)
+![1586446569391](assets/1586446569391.png)
 
 
 
@@ -1148,7 +1148,7 @@ public class UnLikesBehaviorDto {
 
 ap_collection APP收藏信息表
 
-![1586446252365](assets\1586446252365.png)
+![1586446252365](assets/1586446252365.png)
 
 对应实体：
 
@@ -1225,7 +1225,7 @@ public class ApCollection implements Serializable {
 
 3 固定访问url
 
-![1586446538516](assets\1586446538516.png)
+![1586446538516](assets/1586446538516.png)
 
 数据流程对象dto
 
@@ -1286,7 +1286,7 @@ public class CollectionBehaviorDto {
 
 #### 2.2.2 表关系说明
 
-![1599668118109](assets\1599668118109.png)
+![1599668118109](assets/1599668118109.png)
 
 ### 2.3 远程接口准备
 
