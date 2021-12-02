@@ -808,7 +808,7 @@ public class UserController {
 
 ##### **dubbo的协议设置**
 
-![1592966585987](../../../../AB%E5%A4%87%E8%AF%BE%E8%AF%BE%E4%BB%B6/09%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE%E4%BB%B6%E7%A0%94%E5%8F%91/5.%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE-dubbo+zk/%E8%AE%B2%E4%B9%89/assets/1592966585987.png)
+![1592966585987](./assets/1592966585987.png)
 
 可设置的取值: 
 
@@ -1023,7 +1023,7 @@ JDK 反序列化结果实体类 = User(id=1, name=hessian, age=22)
 
 ##### **dubbo的注册中心设置**
 
-![1592966740960](../../../../AB%E5%A4%87%E8%AF%BE%E8%AF%BE%E4%BB%B6/09%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE%E4%BB%B6%E7%A0%94%E5%8F%91/5.%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE-dubbo+zk/%E8%AE%B2%E4%B9%89/assets/1592966740960.png)
+![1592966740960](./assets/1592966740960.png)
 
 如果配置zookeeper集群:
 
@@ -1326,9 +1326,9 @@ github地址：<https://github.com/apache/dubbo-admin>
    
    ```
 
-   ![1592960051666](../../../../AB%E5%A4%87%E8%AF%BE%E8%AF%BE%E4%BB%B6/09%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE%E4%BB%B6%E7%A0%94%E5%8F%91/5.%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE-dubbo+zk/%E8%AE%B2%E4%B9%89/assets/1592960051666.png)
+   ![1592960051666](./assets/1592960051666.png)
 
-   ![1592960074231](../../../../AB%E5%A4%87%E8%AF%BE%E8%AF%BE%E4%BB%B6/09%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE%E4%BB%B6%E7%A0%94%E5%8F%91/5.%E5%B0%B1%E4%B8%9A%E5%8A%A0%E5%BC%BA%E8%AF%BE-dubbo+zk/%E8%AE%B2%E4%B9%89/assets/1592960074231.png)
+   ![1592960074231](./assets/1592960074231.png)
 
 
 
