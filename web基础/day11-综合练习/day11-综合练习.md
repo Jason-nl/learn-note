@@ -59,7 +59,7 @@ typora-copy-images-to: img
 
   **【 1这次综合练习需要用到以下jar包】**
 
-![image-20191215165107564](img\image-20191215165107564.png)
+![image-20191215165107564](img/image-20191215165107564.png)
 
 **【2配置文件】**
 
@@ -229,13 +229,13 @@ public class EncodingFilter implements Filter {
 
 ​	jar包一般都会存放在WEB-INF目录下的lib目录中。由于IDEA的web项目模板没有帮我们提供这个目录。所有，我们需要手动在WEB-INF下创建lib目录。
 
-![image-20191217084622075](img\image-20191217084622075.png)
+![image-20191217084622075](img/image-20191217084622075.png)
 
 #### 3.3  导入jar包
 
 ​	将jar包复制到lib目录，然后选中所有的jar包---鼠标右键---Add As Library
 
-![image-20191217084816978](img\image-20191217084816978.png)
+![image-20191217084816978](img/image-20191217084816978.png)
 
  
 
@@ -443,7 +443,7 @@ public class Test01 {
 
 2、需要的dao层接口UserMapper
 
-![image-20191217091017818](img\image-20191217091017818.png)
+![image-20191217091017818](img/image-20191217091017818.png)
 
 代码：
 
@@ -460,7 +460,7 @@ public interface UserMapper {
 
 3、效果
 
-![image-20191217091211847](img\image-20191217091211847.png)
+![image-20191217091211847](img/image-20191217091211847.png)
 
 
 

@@ -627,7 +627,7 @@ public class DeleteServlet extends HttpServlet {
 
 ##### 9.1.1 需求分析
 
-![1591761187779](img\1591761187779.png)      
+![1591761187779](img/1591761187779.png)      
 
 
 
@@ -1076,7 +1076,7 @@ public class SessionAPIServlet extends HttpServlet {
 
 每次访问session的唯一标识sessionId都不一样。
 
-![image-20191209154058246](img\image-20191209154058246.png)
+![image-20191209154058246](img/image-20191209154058246.png)
 
 ##### 方式四：手动设置过期时间
 
@@ -1397,55 +1397,55 @@ public class GetSessionServlet extends HttpServlet {
 
 1.点击idea中的项目结构：在idea的右上角。
 
-![image-20191209172017178](img\image-20191209172017178.png)
+![image-20191209172017178](img/image-20191209172017178.png)
 
 2.进入目录结构按照如下操作：
 
-![image-20191209172549847](img\image-20191209172549847.png)
+![image-20191209172549847](img/image-20191209172549847.png)
 
 3.选择Build工程
 
-![image-20191209172734545](img\image-20191209172734545.png)
+![image-20191209172734545](img/image-20191209172734545.png)
 
 4.
 
-![image-20191209172831992](img\image-20191209172831992.png)
+![image-20191209172831992](img/image-20191209172831992.png)
 
 5.然后按照如下操作：
 
-![image-20191209173135938](img\image-20191209173135938.png)
+![image-20191209173135938](img/image-20191209173135938.png)
 
 6.将上述打好包的工程放到tomcat的安装webapps目录下：
 
-![image-20191209173401947](img\image-20191209173401947.png)
+![image-20191209173401947](img/image-20191209173401947.png)
 
 
 
 7.到tomcat的bin目录下去启动tomcat
 
-![image-20191209173545805](img\image-20191209173545805.png)
+![image-20191209173545805](img/image-20191209173545805.png)
 
 8.在浏览器分别访问setSession和getSession
 
-![image-20191209173727948](img\image-20191209173727948.png)
+![image-20191209173727948](img/image-20191209173727948.png)
 
-![image-20191209173759811](img\image-20191209173759811.png)
+![image-20191209173759811](img/image-20191209173759811.png)
 
 9.正常关闭tomcat：到tomcat的bin目录下去关闭。
 
-![image-20191209173925877](img\image-20191209173925877.png)
+![image-20191209173925877](img/image-20191209173925877.png)
 
 
 
 我们就会在work\Catalina\localhost\day10发下session钝化后的文件：
 
-![image-20191209174113931](img\image-20191209174113931.png)
+![image-20191209174113931](img/image-20191209174113931.png)
 
 10.再次启动tomcat服务器，然后在浏览器中访问setSession和getSession
 
-![image-20191209174257286](img\image-20191209174257286.png)
+![image-20191209174257286](img/image-20191209174257286.png)
 
-![image-20191209174318069](img\image-20191209174318069.png)
+![image-20191209174318069](img/image-20191209174318069.png)
 
  
 
@@ -1479,9 +1479,9 @@ public class GetSessionServlet extends HttpServlet {
 
 **禁用cookie**
 
-![image-20191210095303538](img\image-20191210095303538.png)
+![image-20191210095303538](img/image-20191210095303538.png)
 
-![image-20191210095413264](img\image-20191210095413264.png)
+![image-20191210095413264](img/image-20191210095413264.png)
 
 
 
@@ -1562,7 +1562,7 @@ public class Demo3GetServlet extends HttpServlet {
 
 效果：
 
-![image-20191210102755768](img\image-20191210102755768.png)
+![image-20191210102755768](img/image-20191210102755768.png)
 
 说明：如果没有重写URL,我们发现重定向之后没有获取到商品信息。
 
@@ -1610,7 +1610,7 @@ public class Demo3GetServlet extends HttpServlet {
 
 效果：
 
-![image-20191210104258615](img\image-20191210104258615.png)
+![image-20191210104258615](img/image-20191210104258615.png)
 
 ##### 【2】超链接的解决方法
 
@@ -1682,7 +1682,7 @@ public class Demo3GetServlet extends HttpServlet {
    
       
 
-![image-20191219234429372](img\image-20191219234429372.png)
+![image-20191219234429372](img/image-20191219234429372.png)
 
 #### 小结
 

@@ -849,7 +849,7 @@ public class HelloFilter implements Filter {
 
 在浏览器中直接访问HelloServlet，看过滤器是否拦截。
 
-![image-20191211093928738](img\image-20191211093928738.png)
+![image-20191211093928738](img/image-20191211093928738.png)
 
 显示是拦截了。
 
@@ -876,11 +876,11 @@ filter.jsp页面代码：
 
 在浏览器上直接访问filter.jsp页面。
 
-![image-20191211094425805](img\image-20191211094425805.png)
+![image-20191211094425805](img/image-20191211094425805.png)
 
 idea控制台：
 
-![image-20191211094452782](img\image-20191211094452782.png)
+![image-20191211094452782](img/image-20191211094452782.png)
 
 我们发现直接访问jsp,然后在jsp页面转发访问helloServlet，过滤器没有拦截。
 

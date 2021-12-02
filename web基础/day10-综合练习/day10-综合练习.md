@@ -57,7 +57,7 @@ typora-copy-images-to: img
 
   **【 1这次综合练习需要用到以下jar包】**
 
-![image-20191215165107564](img\image-20191215165107564.png)
+![image-20191215165107564](img/image-20191215165107564.png)
 
 **【2配置文件】**
 
@@ -227,13 +227,13 @@ public class EncodingFilter implements Filter {
 
 ​	jar包一般都会存放在WEB-INF目录下的lib目录中。由于IDEA的web项目模板没有帮我们提供这个目录。所有，我们需要手动在WEB-INF下创建lib目录。
 
-![image-20191217084622075](img\image-20191217084622075.png)
+![image-20191217084622075](img/image-20191217084622075.png)
 
 #### 3.3  导入jar包
 
 ​	将jar包复制到lib目录，然后选中所有的jar包---鼠标右键---Add As Library
 
-![image-20191217084816978](img\image-20191217084816978.png)
+![image-20191217084816978](img/image-20191217084816978.png)
 
  
 
@@ -441,7 +441,7 @@ public class Test01 {
 
 2、需要的dao层接口UserMapper
 
-![image-20191217091017818](img\image-20191217091017818.png)
+![image-20191217091017818](img/image-20191217091017818.png)
 
 代码：
 
@@ -458,7 +458,7 @@ public interface UserMapper {
 
 3、效果
 
-![image-20191217091211847](img\image-20191217091211847.png)
+![image-20191217091211847](img/image-20191217091211847.png)
 
 
 
@@ -1053,13 +1053,13 @@ t_user 添加字段 isdelete 。直接使用图形化界面工具SQLYog给t_user
 
 1)选中t_user表，右键选择更改表。
 
-![image-20200922205630448](img\image-20200922205630448.png)
+![image-20200922205630448](img/image-20200922205630448.png)
 
 
 
 2)最后一个字段email的下一行,然后添加数据即可。在添加的一行中输入字段名为isdelete,类型为int，长度是11，不为空，默认值是0.最后点击下面的Alter.
 
-![image-20200922205829055](img\image-20200922205829055.png)
+![image-20200922205829055](img/image-20200922205829055.png)
 
 
 

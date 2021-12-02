@@ -464,7 +464,7 @@ JavaWeb项目与java项目的区别：
 
 启动tomcat服务器，然后在浏览器上测试：http://localhost:8080/aaa/index.html
 
-![1573203228801](img\1573203228801.png)     
+![1573203228801](img/1573203228801.png)     
 
 ######   【3】独立的xml配置
 
@@ -472,15 +472,15 @@ idea中默认是这种访问方式
 
  第一步：在tomcat/conf目录下新建一个Catalina目录（如果已经存在无需创建）     
 
-![1573203848685](img\1573203848685.png)                            
+![1573203848685](img/1573203848685.png)                            
 
 第二步：在Catalina目录下创建localhost目录   
 
-![1573203866900](img\1573203866900.png) 
+![1573203866900](img/1573203866900.png) 
 
 第三步：在localhost中创建xml配置文件，名称为：second（**注：这个名称是浏览器访问路径，随便定义**）   
 
-![1573203884531](img\1573203884531.png) 
+![1573203884531](img/1573203884531.png) 
 
 第四步：添加xml文件的内容为：
 
@@ -493,7 +493,7 @@ idea中默认是这种访问方式
 
 第五步：在e:/MyWeb/下创建index.html，访问测试
 
-![1573203911590](img\1573203911590.png)
+![1573203911590](img/1573203911590.png)
 
 
 
@@ -642,7 +642,7 @@ Restart server:表示.java源文件改变时重新部署代码，重新部署。
 
 对于静态页面每次修改之后都要重新部署，所以我们可以在idea中配置页面资源热更新，这样每次修改静态页面之后就不会在重新部署了。
 
-![image-20200820232838710](img\image-20200820232838710.png)
+![image-20200820232838710](img/image-20200820232838710.png)
 
 
 
@@ -795,7 +795,7 @@ servlet.service();
 
 ​	我们可以在定义一个类GenericServlet来实现Servlet接口，这个类重写接口中的所有的抽象方法，然后让我们自定义类继承GenericServlet类，这样就可以只重写需要的方法了
 
-![image-20200821092436424](img\image-20200821092436424.png)
+![image-20200821092436424](img/image-20200821092436424.png)
 
 ​	
 
@@ -1114,7 +1114,7 @@ public class FormServlet extends HttpServlet {
 
 
 
-![1586835525081](img\1586835525081.png) 
+![1586835525081](img/1586835525081.png) 
 
 
 
@@ -1122,7 +1122,7 @@ public class FormServlet extends HttpServlet {
 
 java代码写错了...
 
-![1586835683969](img\1586835683969.png) 
+![1586835683969](img/1586835683969.png) 
 
 
 
@@ -1699,7 +1699,7 @@ public class LastDemoServlet extends HttpServlet {
 
 WebServlet注解中的属性含义：
 
-![img/Servlet3注解.png](img\Servlet3注解.png)
+![img/Servlet3注解.png](img/Servlet3注解.png)
 
 
 
