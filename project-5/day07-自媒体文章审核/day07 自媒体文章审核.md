@@ -53,17 +53,17 @@
 
 （1）wm_news  自媒体文章表  在自媒体库
 
-![1585372690883](assets\1585372690883.png)
+![1585372690883](assets/1585372690883.png)
 
 <font color='red'>status字段：0 草稿   1 待审核   2 审核失败   3 人工审核   4 人工审核通过   8 审核通过（待发布）  9 已发布</font>
 
 （2）ap_author  文章作者表   在article库
 
-![1585372935340](assets\1585372935340.png)
+![1585372935340](assets/1585372935340.png)
 
 （3）ap_article_config   文章配置表  在article库
 
-![1585707181340](assets\1585373032832.png)
+![1585707181340](assets/1585373032832.png)
 
 对应实体：
 
@@ -126,7 +126,7 @@ public class ApArticleConfig {
 
 （4）ap_article  文章信息表   在article库
 
-![1585707265543](assets\1585373115172.png)
+![1585707265543](assets/1585373115172.png)
 
 - layout 文章布局  0 无图文章   1 单图文章    2或3 多图文章
 
@@ -278,7 +278,7 @@ public class ApArticle {
 
 （5）ap_article_content  文章内容表 在article库
 
-![1585707351655](assets\1585373314671.png)
+![1585707351655](assets/1585373314671.png)
 
 对应实体：
 
@@ -959,7 +959,7 @@ workerId:机器id(取值范围：0-31)
 
 同时需要把资料文件夹中的类拷贝到文章微服务下：
 
-![1606067472437](assets\1606067472437.png)
+![1606067472437](assets/1606067472437.png)
 
 #### 2.4.3 文章微服务参数准备
 
@@ -1383,7 +1383,7 @@ spring:
 
 在WeMediaNewsAutoScanServiceImpl的autoScanByMediaNewsId方法加上注解`@GlobalTransactional`
 
-![1585708239914](assets\1585708239914.png)
+![1585708239914](assets/1585708239914.png)
 
 ## 5 文章审核功能-综合测试
 

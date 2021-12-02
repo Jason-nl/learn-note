@@ -27,9 +27,9 @@
 
 官网地址：http://seata.io/zh-cn/
 
-![1597387379119](assets\1597387379119.png)
+![1597387379119](assets/1597387379119.png)
 
-![1597387428605](assets\1597387428605.png)
+![1597387428605](assets/1597387428605.png)
 
 - Seata用于解决分布式事务
 
@@ -569,7 +569,7 @@ spring:
 
 （2）异常测试，我们在方法中添加` int x=1/0`  ，看认证信息和自媒体用户是否能够回滚。
 
-![1596338824199](assets\1596338824199.png)
+![1596338824199](assets/1596338824199.png)
 
 测试结果：
 
@@ -975,7 +975,7 @@ spring:
 
 在去保存图片之前，需要先知道是哪一位自媒体人登录了当前系统，也就是需要确定哪个自媒体人上传了图片
 
-![1596346313124](assets\1596346313124.png)
+![1596346313124](assets/1596346313124.png)
 
 **操作步骤：**
 
@@ -1073,13 +1073,13 @@ public class WmTokenFilter extends GenericFilterBean {
 
 ##### 4.3.1.1 文件上传需求
 
-![1584101761819](assets\1584101761819.png)
+![1584101761819](assets/1584101761819.png)
 
 上传图片到OSS，同时要保存一份数据到表中，方便后期管理
 
 媒体图文素材信息表**wm_material**
 
-![1584101860238](assets\1584101860238.png)
+![1584101860238](assets/1584101860238.png)
 
 对应实体类：
 
@@ -1337,7 +1337,7 @@ public class WmMaterialController implements WmMaterialControllerApi {
 
 #### 4.3.2 素材列表加载
 
-![1584103059932](assets\1584103059932.png)
+![1584103059932](assets/1584103059932.png)
 
 1. 素材列表查询，前台有可能给传一个条件 是否收藏  0 不收藏  1 收藏
 2. 只能查询当前登录用户上传的素材
@@ -1438,7 +1438,7 @@ public ResponseResult findList(@RequestBody WmMaterialDto dto) {
 
 使用postman测试，需要先登录设置token后再操作
 
-![1597557322851](assets\1597557322851.png)
+![1597557322851](assets/1597557322851.png)
 
 也可打开前端工程进行测试
 
@@ -1454,7 +1454,7 @@ public ResponseResult findList(@RequestBody WmMaterialDto dto) {
 
 wm_news_material （自媒体图文引用素材信息表）
 
-![1584103726699](assets\1584103726699.png)
+![1584103726699](assets/1584103726699.png)
 
 对应实体类：
 
@@ -1611,7 +1611,7 @@ public ResponseResult delPicture(@PathVariable("id") Integer id) {
 
 使用postman测试，需要先登录设置token后再操作
 
-![1597557222449](assets\1597557222449.png)
+![1597557222449](assets/1597557222449.png)
 
 删除成功后打开阿里云OSS查看是否删除文件
 
@@ -1711,6 +1711,6 @@ public class WemediaConstants {
 
 使用postman测试，需要先登录设置token后再操作
 
-![1597557189341](assets\1597557189341.png)
+![1597557189341](assets/1597557189341.png)
 
 打开前端工程，测试效果

@@ -12,7 +12,7 @@
 
 ### 1.1 需求分析
 
-![1597905150395](assets\1597905150395.png)
+![1597905150395](assets/1597905150395.png)
 
 ### 1.2 表结构和实体类
 
@@ -353,7 +353,7 @@ public class WmNewsController implements WmNewsControllerApi {
 
 使用postman测试需要先登录，获取token后访问
 
-![1596468902820](assets\1596468902820.png)
+![1596468902820](assets/1596468902820.png)
 
 或打开页面进行测试
 
@@ -367,7 +367,7 @@ public class WmNewsController implements WmNewsControllerApi {
 
 ### 2.1需求分析
 
-![1597904087446](assets\1597904087446.png)
+![1597904087446](assets/1597904087446.png)
 
 文章展示列表页面打开的时候，默认自动加载频道列表数据进行展示，就是查询所有频道数据
 
@@ -419,17 +419,17 @@ public ResponseResult findAll() {
 
 ### 3.1 需求分析
 
-![](assets\发布文章2.png)
+![](assets/发布文章2.png)
 
 保存文章，除了需要wm_news表以外，还需要另外两张表
 
 ​                                                  **wm_material  素材表**
 
-![](assets\wm_material.png)
+![](assets/wm_material.png)
 
 ​                                               **wm_news_material  文章素材关系表**
 
-![](assets\wm_news_material.png)
+![](assets/wm_news_material.png)
 
 
 
@@ -906,7 +906,7 @@ public ResponseResult submitNews(@RequestBody WmNewsDto wmNews) {
 
 postman工具测试
 
-![1596469959479](assets\1596469959479.png)
+![1596469959479](assets/1596469959479.png)
 
 **打开前端工程联调**
 
@@ -919,11 +919,11 @@ postman工具测试
 
 ### 4.1 需求分析
 
-![1597836104065](assets\1597836104065.png)
+![1597836104065](assets/1597836104065.png)
 
 点击修改的时候，就是根据文章id查询，跳转至编辑页面进行展示
 
-![1597836145040](assets\1597836145040.png)
+![1597836145040](assets/1597836145040.png)
 
 ### 4.2 接口定义
 
@@ -985,7 +985,7 @@ public ResponseResult findWmNewsById(@PathVariable("id") Integer id) {
 
 ### 4.5 测试
 
-![1596470129311](assets\1596470129311.png)
+![1596470129311](assets/1596470129311.png)
 
 打开页面进行测试
 
@@ -995,7 +995,7 @@ public ResponseResult findWmNewsById(@PathVariable("id") Integer id) {
 
 ### 5.1 需求分析
 
-![1597836189478](assets\1597836189478.png)
+![1597836189478](assets/1597836189478.png)
 
 - 当文章状态为9(已发布)且已上架则不能删除文章，下架状态可以删除，如果是其他状态可以删除
 - 删除文章之前需要先把素材与文章的关系删除掉
@@ -1069,9 +1069,9 @@ public ResponseResult delNews(@PathVariable("id") Integer id) {
 
 ### 6.1 需求分析
 
-![1597836253759](assets\1597836253759.png)
+![1597836253759](assets/1597836253759.png)
 
-![1597836273736](assets\1597836273736.png)
+![1597836273736](assets/1597836273736.png)
 
 - 当前已经发布（状态为9）的文章可以上架（enable = 1），也可以下架（enable = 0）
 
