@@ -65,7 +65,7 @@ unzip elasticsearch-analysis-ik-7.4.2.zip
 
 http://192.168.200.129:9200
 
-![1602035683970](assets\1602035683970.png)
+![1602035683970](assets/1602035683970.png)
 
 
 
@@ -75,7 +75,7 @@ http://192.168.200.129:9200
 docker update --restart=always  elasticsearch
 ```
 
-![1587367304115](assets\1587367304115.png)
+![1587367304115](assets/1587367304115.png)
 
 ### 1.6 安装kibana
 
@@ -93,7 +93,7 @@ docker run -d -p 5601:5601 --name kibana --link elasticsearch -e "ELASTICSEARCH_
 
 测试:http://192.168.200.129:5601/
 
-![1601094536253](assets\1601094536253.png)
+![1601094536253](assets/1601094536253.png)
 
 ## 2 app端文章搜索
 
@@ -101,11 +101,11 @@ docker run -d -p 5601:5601 --name kibana --link elasticsearch -e "ELASTICSEARCH_
 
 搜索页面
 
-![1587366130557](assets\1587366130557.png)
+![1587366130557](assets/1587366130557.png)
 
 搜索结果页面
 
-![1587366822729](assets\1587366822729.png)
+![1587366822729](assets/1587366822729.png)
 
 - 用户输入关键可搜索文章列表
 - 关键词高亮显示
@@ -156,7 +156,7 @@ PUT app_info_article
 }
 ```
 
-![1601134825588](assets\1601134825588.png)
+![1601134825588](assets/1601134825588.png)
 
 创建成功后：
 
@@ -1118,7 +1118,7 @@ public class ArticleAddOrRemoveListener {
 
 ### 3.1 需求分析
 
-![1587366878895](assets\1587366878895.png)
+![1587366878895](assets/1587366878895.png)
 
 - 展示用户的搜索记录10条，按照搜索关键词的时间倒序
 - 可以删除搜索记录
@@ -1600,7 +1600,7 @@ ResponseResult delUserSearch(HistorySearchDto historySearchDto);
 
 操作方法如下：
 
-![1587366921085](assets\1587366921085.png)
+![1587366921085](assets/1587366921085.png)
 
 - 根据用户输入的关键字展示联想词
 
