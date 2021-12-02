@@ -452,11 +452,11 @@ app下载地址：https://weex.apache.org/guide/playground.html
 > 4. 当用户下拉可以加载最新的文章
 >    * 本页文章列表中发布时间最大的时间为依据
 
-![1599533161737](assets\1599533161737.png)
+![1599533161737](assets/1599533161737.png)
 
 如果加载首页数据，前端会默认给传递一些参数
 
-![1606314616342](assets\1606314616342.png)
+![1606314616342](assets/1606314616342.png)
 
 ### 4.2 app端文章列表-功能实现
 
@@ -709,7 +709,7 @@ public class ArticleHomeController{
 
 ### 4.3 app端文章列表-测试
 
-![1599471047508](assets\1599471047508.png)
+![1599471047508](assets/1599471047508.png)
 
 
 
@@ -717,7 +717,7 @@ public class ArticleHomeController{
 
 ### 5.1 app文章详情-需求分析
 
-![1586156682286](assets\1586156682286.png)
+![1586156682286](assets/1586156682286.png)
 
 
 
@@ -731,11 +731,11 @@ public class ArticleHomeController{
 
 ap_article_content  app文章内容表
 
-![1586157495840](assets\1586157495840.png)
+![1586157495840](assets/1586157495840.png)
 
 ap_article_config  app文章配置表
 
-![1586157523334](assets\1586157523334.png)
+![1586157523334](assets/1586157523334.png)
 
 前端发起请求解析结果，渲染到页面：
 
@@ -871,7 +871,7 @@ public class ArticleInfoController implements ArticleInfoControllerApi {
 
 在文章列表点击一篇文章进入详情
 
-![1586186193142](assets\1586186193142.png)
+![1586186193142](assets/1586186193142.png)
 
 并不能查询出文章信息。
 
@@ -891,7 +891,7 @@ public class ArticleInfoController implements ArticleInfoControllerApi {
 
 #### 5.4.2 jackson序列化和反序列化原理说明
 
-![1599614716990](assets\1599614716990.png)
+![1599614716990](assets/1599614716990.png)
 
 - 当后端响应给前端的数据中包含了id或者特殊标识（可自定义）的时候，把当前数据进行转换为String类型
 - 当后端响应前端articleId字段时，使用jackson序列化，指定该字段序列化设置为序列化为String
@@ -925,7 +925,7 @@ public class ApArticle {
 
 重启项目，使用app前端再次访问文章详情，问题解决。
 
-![1599471110116](assets\1599471110116.png)
+![1599471110116](assets/1599471110116.png)
 
 
 
@@ -933,7 +933,7 @@ public class ApArticle {
 
 ### 6.1 需求分析
 
-![1599707964444](assets\1599707964444.png)
+![1599707964444](assets/1599707964444.png)
 
 如上效果：
 
