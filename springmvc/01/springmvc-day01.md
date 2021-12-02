@@ -33,7 +33,7 @@ B/S架构：浏览器===>服务器
 
 目前J2EE中，几乎全部都是B/S架构方式，三层架构如图所示：
 
-![image-20191203141546358](image\image-20191203141546358.png)
+![image-20191203141546358](image/image-20191203141546358.png)
 
 #### 【2】MVC是什么
 
@@ -46,7 +46,7 @@ MVC，即 Model 模型、View 视图，及 Controller 控制器。
 - View：视图，为用户提供使用界面，与用户直接进行交互。
 - Controller：控制器，用于将用户请求转发给相应的 Model 进行处理，并根据 Model 的计算结果向用户提供相应响应。
 
-![image-20191203143029185](image\image-20191203143029185.png)
+![image-20191203143029185](image/image-20191203143029185.png)
 
 MVC 架构程序的工作流程：
  （1）用户通过 View 页面向服务端提出请求，可以是表单请求、超链接请求、AJAX 请求等
@@ -56,7 +56,7 @@ MVC 架构程序的工作流程：
 
 #### 【3】三层架构和MVC关系
 
-![image-20191203145812960](image\image-20191203145812960.png)
+![image-20191203145812960](image/image-20191203145812960.png)
 
 ### 2、SpringMVC概述
 
@@ -74,13 +74,13 @@ MVC 架构程序的工作流程：
 
 - 采用了松散耦合可插拔组件结构，比其他 MVC 框架更具扩展性和灵活性。
 
-![image-20191203151952160](image\image-20191203151952160.png)
+![image-20191203151952160](image/image-20191203151952160.png)
 
 #### 【2】SpringMVC在三层架构的地位
 
-![image-20191203152901994](image\image-20191203152901994.png)
+![image-20191203152901994](image/image-20191203152901994.png)
 
-![1596940561761](image\1596940561761.png)
+![1596940561761](image/1596940561761.png)
 
 
 
@@ -121,29 +121,29 @@ MVC 架构程序的工作流程：
 
 #### 【1】创建maven web项目
 
-![image-20191203155727258](image\image-20191203155727258.png)
+![image-20191203155727258](image/image-20191203155727258.png)
 
-![image-20191203155941440](image\image-20191203155941440.png)
+![image-20191203155941440](image/image-20191203155941440.png)
 
-![1586311390853](C:\Users\Administrator\Desktop\讲义\springmvc-day01\01讲义\image\1586311390853.png)
+![1586311390853](C:\Users\Administrator\Desktop\讲义\springmvc-day01\01讲义\image/1586311390853.png)
 
-![image-20191203160336901](image\image-20191203160336901.png)
+![image-20191203160336901](image/image-20191203160336901.png)
 
-![image-20191203160613572](image\image-20191203160613572.png)
+![image-20191203160613572](image/image-20191203160613572.png)
 
-![image-20191203160817620](image\image-20191203160817620.png)
+![image-20191203160817620](image/image-20191203160817620.png)
 
-![image-20191203160922961](image\image-20191203160922961.png)
+![image-20191203160922961](image/image-20191203160922961.png)
 
 手动指定java 为资源目录
 
-![image-20191203161034716](image\image-20191203161034716.png)
+![image-20191203161034716](image/image-20191203161034716.png)
 
 手动指定resources为资源目录
 
-![image-20191203161157080](image\image-20191203161157080.png)
+![image-20191203161157080](image/image-20191203161157080.png)
 
-![image-20191203161229299](image\image-20191203161229299.png)
+![image-20191203161229299](image/image-20191203161229299.png)
 
 在java的路径中建立com.itheima.project的包路径
 
@@ -230,7 +230,7 @@ MVC 架构程序的工作流程：
 
 ##### 【3.1】spring-mvc.xml配置
 
-![image-20191203161953981](image\image-20191203161953981.png)
+![image-20191203161953981](image/image-20191203161953981.png)
 
 spring-mvc.xml是框架的主配置文件，用于管理springmvc表现层相关的对象。
 
@@ -357,13 +357,13 @@ public class HelloController {
 
 启动tomcat
 
-![image-20191203164929858](image\image-20191203164929858.png)
+![image-20191203164929858](image/image-20191203164929858.png)
 
 访问
 
  http://localhost:8080/platform/hello 
 
-![image-20191203165004207](image\image-20191203165004207.png)
+![image-20191203165004207](image/image-20191203165004207.png)
 
 ### 3、入门案例中执行顺序
 
@@ -381,7 +381,7 @@ public class HelloController {
 
 ​			时序图：
 
-![image-20191203171050122](image\image-20191203171050122.png)
+![image-20191203171050122](image/image-20191203171050122.png)
 
 #### 【2】请求处理顺序
 
@@ -397,11 +397,11 @@ public class HelloController {
 
 （6）dispatcherServlet调用视图解析器，组装响应对象，页面返回给浏览器【视图解析器】
 
-![image-20191203172403022](image\image-20191203172403022.png)
+![image-20191203172403022](image/image-20191203172403022.png)
 
 
 
-![1596944229568](image\1596944229568.png)
+![1596944229568](image/1596944229568.png)
 
 处理器映射器：请求与方法的关系
 
@@ -460,7 +460,7 @@ public class DispatcherServlet extends FrameworkServlet {
 }
 ```
 
-![image-20191204100530746](image\image-20191204100530746.png)
+![image-20191204100530746](image/image-20191204100530746.png)
 
 ### 1、组件介绍
 
@@ -486,7 +486,7 @@ public class DispatcherServlet extends FrameworkServlet {
 
 
 
-![image-20191204100807558](image\image-20191204100807558.png)
+![image-20191204100807558](image/image-20191204100807558.png)
 
 尽管springmvc框架默认配置了处理器映射器和适配器。在企业项目中，我们还是需要显示配置处理器映射器和适配器。显示配置的目的：增加其它应用的配置
 
@@ -521,7 +521,7 @@ public class DispatcherServlet extends FrameworkServlet {
 
  根据视图的名称将其解析为 View 类型的视图，如通过 ModelAndView 中的视图名称将其解析成 View，View 是用来渲染页面的，也就是将 Model 填入模板中，生成 html 或其他格式的文件 
 
-![image-20191204102549983](image\image-20191204102549983.png)
+![image-20191204102549983](image/image-20191204102549983.png)
 
 ```xml
     <!--配置视图解析器-->
@@ -541,7 +541,7 @@ RequestMappingHandlerAdapter
 
 #### 【1】架构图解
 
-![image-20191204170408642](image\image-springMVC架构.png)
+![image-20191204170408642](image/image-springMVC架构.png)
 
 #### 【2】初始化创建
 
@@ -579,7 +579,7 @@ public class DispatcherServlet extends FrameworkServlet {
 }
 ```
 
-![image-20200110160037128](image\image-20200110160037128.png)
+![image-20200110160037128](image/image-20200110160037128.png)
 
 #### 【3】DispatcherServlet拦截
 
@@ -644,13 +644,13 @@ protected void doDispatch(HttpServletRequest request, HttpServletResponse respon
 
 getHandler(processedRequest)方法实际上就是从HandlerMapping中找到url和Controller的对应关系 ,具体实现是在抽象类AbstractHandlerMapping中，而RequestMappingHandlerMapping是使用注解方式时所使用的处理器映射器
 
-![image-20191216114911846](image\image-20191216114911846.png)
+![image-20191216114911846](image/image-20191216114911846.png)
 
 #### 【5】RequestMappingHandlerAdapter
 
 doDispatch方法中带着从getHandler(processedRequest)获得mappedHandler调用getHandlerAdapter(mappedHandler.getHandler())方法，获得在ApplicationObjectSupport中初始化的List<HandlerAdapter> handlerAdapters中对应的HandlerAdapter
 
-![image-20191216120125702](image\image-20191216120125702.png)
+![image-20191216120125702](image/image-20191216120125702.png)
 
 #### 【6】ViewResolver
 
@@ -768,7 +768,7 @@ InternalResourceView的renderMergedOutputModel
 
 创建springmvc-day01-02request-mapping结构如下
 
-![1579616069546](image\1579616069546.png)
+![1579616069546](image/1579616069546.png)
 
 #### 【1】基本用法
 
@@ -998,29 +998,29 @@ public class BasicController {
 
 
 
-![1579617841665](image\1579617841665.png)
+![1579617841665](image/1579617841665.png)
 
-![1579617911064](image\1579617911064.png)
+![1579617911064](image/1579617911064.png)
 
-![1579617940132](image\1579617940132.png)
+![1579617940132](image/1579617940132.png)
 
-![1579617967380](image\1579617967380.png)
+![1579617967380](image/1579617967380.png)
 
-![1579617992240](image\1579617992240.png)
+![1579617992240](image/1579617992240.png)
 
-![1579618033667](image\1579618033667.png)
+![1579618033667](image/1579618033667.png)
 
-![1579618070844](image\1579618070844.png)
+![1579618070844](image/1579618070844.png)
 
-![1579618110522](image\1579618110522.png)
+![1579618110522](image/1579618110522.png)
 
 访问http://localhost:8080/platform/basic
 
-![1579618153380](image\1579618153380.png)
+![1579618153380](image/1579618153380.png)
 
 访问http://localhost:8080/platform/basic/succeed
 
-![1579618206909](image\1579618206909.png)
+![1579618206909](image/1579618206909.png)
 
 ##### 【1.3】小结
 
@@ -1159,11 +1159,11 @@ public class DoMethodController {
 
 使用postman测试
 
-![1579618929040](image\1579618929040.png)
+![1579618929040](image/1579618929040.png)
 
-![1579618969721](image\1579618969721.png)
+![1579618969721](image/1579618969721.png)
 
-![1579619000866](image\1579619000866.png)
+![1579619000866](image/1579619000866.png)
 
 ##### 【3.3】小结
 
@@ -1252,7 +1252,7 @@ http://localhost:8080/platform/dourl/a/1
 
 #### 【1】介绍
 
-![image-20191217101119152](image\image-20191217101119152.png)
+![image-20191217101119152](image/image-20191217101119152.png)
 
 @RequestMapping 子类注解列表
 
@@ -1364,7 +1364,7 @@ public class SonMappingController {
 
 使用postman测试
 
-![1579619824715](image\1579619824715.png)
+![1579619824715](image/1579619824715.png)
 
 #### 【4】小结
 
@@ -1385,7 +1385,7 @@ public class SonMappingController {
 
 例如：登陆的时候，填写账号和密码，然后传给controller，controller需要接受传递过来的账号和密码，登陆成功之后需要返回信息给前台页面，这个接受和传递都可以叫做参数绑定
 
-![image-20191217113746793](image\image-20191217113746793.png)
+![image-20191217113746793](image/image-20191217113746793.png)
 
 ​	处理器映射器RequestMappingHandlerMapping找到对应urls与Controller的关系后，后续交给 处理器适配器RequestMappingHandlerAdapter来处理，在处理之前由 RequestMappingHandlerAdapter完成参数的绑定，那么我们看下 RequestMappingHandlerAdapter.java类的afterPropertiesSet（line:481）方法初始化相关方法参数解析器。代码如下 ：
 
@@ -1486,7 +1486,7 @@ private List<HandlerMethodArgumentResolver> getDefaultArgumentResolvers() {
 
 拷贝springmvc-day01-02request-mapping新建项目springmvc-day01-03argument，结构如下
 
-![image-20191217143221825](image\image-20191217143221825.png)
+![image-20191217143221825](image/image-20191217143221825.png)
 
 ##### 【2.2】pom.xml中导入依赖
 
@@ -1688,7 +1688,7 @@ public class CustomerController {
 
 点击查看
 
-![1586011267508](image\1586011267508.png)
+![1586011267508](image/1586011267508.png)
 
 #### 【3】小结
 
@@ -1785,7 +1785,7 @@ modelMap:${modelMap}
 
 访问 http://localhost:8080/platform/default-type 
 
-![image-20191217170024051](image\image-20191217170024051.png)
+![image-20191217170024051](image/image-20191217170024051.png)
 
 #### 【2】基本数据类型
 
@@ -1873,15 +1873,15 @@ public class BasicTypeController {
 
 访问 http://localhost:8080/platform/basic-type/to-basic-type 
 
-![image-20191217173207193](image\image-20191217173207193.png)
+![image-20191217173207193](image/image-20191217173207193.png)
 
 填写内容1点击提交
 
-![image-20191217173249626](image\image-20191217173249626.png)
+![image-20191217173249626](image/image-20191217173249626.png)
 
 如果此时我们不填写内容提交会怎么样？
 
-![image-20191217173913157](image\image-20191217173913157.png)
+![image-20191217173913157](image/image-20191217173913157.png)
 
 不建议使用简单类型的基础类型（int）。原因是基础类型不能为null值，如果不传递会报异常，改造下BasicTypeController
 
@@ -1928,7 +1928,7 @@ public class BasicTypeController {
 
 访问 http://localhost:8080/platform/basic-type/to-basic-type 
 
-![image-20191217173207193](image\image-20191217173207193.png)
+![image-20191217173207193](image/image-20191217173207193.png)
 
 #### 【3】pojo(实体类)类型
 
@@ -2164,17 +2164,17 @@ public class PojoTypeController {
 
 访问 http://localhost:8080/platform/pojo-type/to-pojo-type 
 
-![image-20191218101826979](image\image-20191218101826979.png)
+![image-20191218101826979](image/image-20191218101826979.png)
 
 填写内容，点击提交
 
-![image-20191218101912870](image\image-20191218101912870.png)
+![image-20191218101912870](image/image-20191218101912870.png)
 
 ##### 【3.4】日期类型处理
 
 这时候我们放开createTime参数，再提交数据
 
-![1579626920928](image\1579626920928.png)
+![1579626920928](image/1579626920928.png)
 
  上面是报错了，Customer.java 的createTime 属性是 Date 类型的，而我们输入的是字符串类型，故绑定不了
 
@@ -2242,11 +2242,11 @@ public class PojoTypeController {
 
 访问 http://localhost:8080/platform/pojo-type/to-pojo-type 
 
-![image-20191218101826979](image\image-20191218101826979.png)
+![image-20191218101826979](image/image-20191218101826979.png)
 
 填写内容，点击提交
 
-![image-20191218105642340](image\image-20191218105642340.png)
+![image-20191218105642340](image/image-20191218105642340.png)
 
 字符串被自动转换为时间格式
 
@@ -2565,17 +2565,17 @@ public class PojosTypeController {
 
 填写内容
 
-![image-20191218114024611](image\image-20191218114024611.png)
+![image-20191218114024611](image/image-20191218114024611.png)
 
 提交
 
-![image-20191218114059426](image\image-20191218114059426.png)
+![image-20191218114059426](image/image-20191218114059426.png)
 
 ##### 【4.4】中文字符集问题
 
-![1579627065374](image\1579627065374.png)
+![1579627065374](image/1579627065374.png)
 
-![1579627091654](image\1579627091654.png)
+![1579627091654](image/1579627091654.png)
 
 提交带有中文的表单之后我们发现页面中出现了乱码，怎么处理？这个时候我们需要在web.xml中配置一个过滤器来处理这个问题
 
@@ -2626,7 +2626,7 @@ public class PojosTypeController {
 
 ```
 
-![1579627343997](image\1579627343997.png)
+![1579627343997](image/1579627343997.png)
 
 #### 【5】数组类型
 
@@ -2763,9 +2763,9 @@ public class ArrayTypeController {
 
 选择所有复选框，点击删除
 
-![image-20191218143933414](image\image-20191218143933414.png)
+![image-20191218143933414](image/image-20191218143933414.png)
 
-![1579627961418](image\1579627961418.png)
+![1579627961418](image/1579627961418.png)
 
 #### 【6】List集合类型
 
@@ -2934,9 +2934,9 @@ public class ListTypeController {
 
 填写内容，点击提交
 
-![image-20191218151041161](image\image-20191218151041161.png)
+![image-20191218151041161](image/image-20191218151041161.png)
 
-![image-20191218151120613](image\image-20191218151120613.png)
+![image-20191218151120613](image/image-20191218151120613.png)
 
 ## 第六章 参数常用注解【重点】
 
@@ -2982,7 +2982,7 @@ public class ListTypeController {
 
  访问http://localhost:8080/platform/customer/findCustomerById 不传递customerId参数机会报错
 
-![image-20191218155950058](image\image-20191218155950058.png)
+![image-20191218155950058](image/image-20191218155950058.png)
 
 
 
@@ -3009,7 +3009,7 @@ public class ListTypeController {
 
 访问 http://localhost:8080/platform/customer/findCustomerById1/1 
 
-![1586335331931](image\1586335331931.png)
+![1586335331931](image/1586335331931.png)
 
 ### 3、@RequestParam
 
@@ -3043,7 +3043,7 @@ required:用于设置是否必需值，默认为true。为true时，如果参数
 
 访问 http://localhost:8080/platform/basic-type/do-basic-type 发现默认传递一个id=1
 
-![image-20191218163105271](image\image-20191218163105271.png)
+![image-20191218163105271](image/image-20191218163105271.png)
 
 ### 4、@RequestBody
 
@@ -3101,13 +3101,13 @@ pom.xml中添加json支持
 
 http://localhost:8080/platform/pojo-type/do-pojo-type
 
-![1579628699072](image\1579628699072.png)
+![1579628699072](image/1579628699072.png)
 
-![1579629839107](image\1579629839107.png)
+![1579629839107](image/1579629839107.png)
 
 #### 【2】@RequestBody的时间转换
 
-![1579629898231](image\1579629898231.png)
+![1579629898231](image/1579629898231.png)
 
 需要注意的是，在接收json数据时，我们之前定义的@InitBinder处理是无效的，这个时候我们就需要使用新的方式在Customer类的createrTime字段上添加
 
@@ -3251,4 +3251,4 @@ public class Customer {
 }
 ```
 
-![1579630116321](image\1579630116321.png)
+![1579630116321](image/1579630116321.png)

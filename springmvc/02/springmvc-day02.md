@@ -35,7 +35,7 @@
 
 拷贝springmvc-day01-03argument新建springmvc-day02-01return-type项目
 
-![image-20191220142713427](image\image-20191220142713427.png)
+![image-20191220142713427](image/image-20191220142713427.png)
 
 新增succeed.jsp页面用于接收信息
 
@@ -114,7 +114,7 @@ public class VoidTypeController {
 
 访问： http://localhost:8080/platform/void-type/request-forward 
 
-![image-20191220105417611](image\image-20191220105417611.png)
+![image-20191220105417611](image/image-20191220105417611.png)
 
 #### 【2】HttpServletRequest重定向
 
@@ -181,7 +181,7 @@ public class VoidTypeController {
 
 浏览器地址发生变化
 
-![image-20191220105417611](image\image-20191220105417611.png)
+![image-20191220105417611](image/image-20191220105417611.png)
 
 #### 【3】HttpServletResponse响应内容
 
@@ -262,7 +262,7 @@ public class VoidTypeController {
 
 访问： http://localhost:8080/platform/void-type/response-return 
 
-![image-20191220111542270](image\image-20191220111542270.png)
+![image-20191220111542270](image/image-20191220111542270.png)
 
 ### 2、ModelAndView
 
@@ -305,11 +305,11 @@ public class ModelAndViewTypeController {
 
 访问 http://localhost:8080/platform/model-view-type 
 
-![1579677934310](image\1579677934310.png)
+![1579677934310](image/1579677934310.png)
 
 #### 【2】优化用法
 
-![image-20191220113116436](image\image-20191220113116436.png)
+![image-20191220113116436](image/image-20191220113116436.png)
 
 视图的解析父路径和后缀类型都是一样的，每次这样写，是不是太累赘了？？
 
@@ -381,7 +381,7 @@ public class ModelAndViewTypeController {
 
 访问 http://localhost:8080/platform/model-view-type 
 
-![1579678202243](image\1579678202243.png)
+![1579678202243](image/1579678202243.png)
 
 ### 3、String字符串（逻辑视图名）
 
@@ -421,7 +421,7 @@ public class StringTypeController {
 
 访问 http://localhost:8080/platform/string-type/default-method 
 
-![image-20191220141112082](image\image-20191220141112082.png)
+![image-20191220141112082](image/image-20191220141112082.png)
 
 #### 【2】forward转发
 
@@ -608,7 +608,7 @@ public class JsonTypeController {
 
 访问 http://localhost:8080/platform/json-type 
 
-![image-20191220150655219](image\image-20191220150655219.png)
+![image-20191220150655219](image/image-20191220150655219.png)
 
 修改
 
@@ -655,7 +655,7 @@ public class JsonTypeController {
 
 访问 http://localhost:8080/platform/json-type 
 
-![image-20191220150655219](image\image-20191220150655219.png)
+![image-20191220150655219](image/image-20191220150655219.png)
 
 ## 第二章 SpringMVC的Restful支持【理解】
 
@@ -712,7 +712,7 @@ Springmvc对restful的支持主要是设置@RequestMapping的method 属性
 
 ​	拷贝springmvc-day02-01return-type新建springmvc-day02-02restful
 
-![image-20191220164815197](image\image-20191220164815197.png)
+![image-20191220164815197](image/image-20191220164815197.png)
 
 ##### 【2.2】编写RestfulController
 
@@ -815,13 +815,13 @@ public class RestfulController {
 
 (1) 以GET方式访问 http://localhost:8080/platform/restful/customer 
 
-![image-20191220165642788](image\image-20191220165642788.png)
+![image-20191220165642788](image/image-20191220165642788.png)
 
 (2)以POST方式访问 http://localhost:8080/platform/restful/customer 
 
 配置 Content-Type 类型为 application/json 
 
-![image-20191220165822527](image\image-20191220165822527.png)
+![image-20191220165822527](image/image-20191220165822527.png)
 
 ```json
 {
@@ -837,27 +837,27 @@ public class RestfulController {
 
 ```
 
-![image-20191220165957203](image\image-20191220165957203.png)
+![image-20191220165957203](image/image-20191220165957203.png)
 
 (3)以DELETE方式访问 http://localhost:8080/platform/restful/customer/1 
 
-![image-20191220170230855](image\image-20191220170230855.png)
+![image-20191220170230855](image/image-20191220170230855.png)
 
 (4)以PUT方式访问 http://localhost:8080/platform/restful/customer/1
 
-![image-20191220170328642](image\image-20191220170328642.png)
+![image-20191220170328642](image/image-20191220170328642.png)
 
-![image-20191220170424462](image\image-20191220170424462.png)
+![image-20191220170424462](image/image-20191220170424462.png)
 
 (5)以PATCH方式访问 http://localhost:8080/platform/restful/customer/1
 
-![image-20191220170517211](image\image-20191220170517211.png)
+![image-20191220170517211](image/image-20191220170517211.png)
 
-![image-20191220170541829](image\image-20191220170541829.png)
+![image-20191220170541829](image/image-20191220170541829.png)
 
 (6)以GET方式访问 http://localhost:8080/platform/restful/customer/1
 
-![image-20191220170647809](image\image-20191220170647809.png)
+![image-20191220170647809](image/image-20191220170647809.png)
 
 #### 【3】小结
 
@@ -896,13 +896,13 @@ public class RestfulController {
 集群环境下，相同的项目的会部署在多台服务器中，例如：现在有A,B,C三台服务器，用户第一次通过nginx访问的A服务器，上传了文件，第二次通nginx访问的B服务，这时候去下载之前上传的文件，在B服务器上没有，那就会访问失败。
 ```
 
-![image-20191223101832847](image\image-20191223101832847.png)
+![image-20191223101832847](image/image-20191223101832847.png)
 
 这里我们就需要一个集中提供存放文件，及提供下载和访问文件的服务器，
 
-![image-20191223102437463](image\image-20191223102437463.png)
+![image-20191223102437463](image/image-20191223102437463.png)
 
-![1597132369102](image\1597132369102.png)
+![1597132369102](image/1597132369102.png)
 
 他的意义在于：
 
@@ -918,17 +918,17 @@ public class RestfulController {
 
  随便找个盘，新建一个空白文件夹，然后复制几个文件过来，最好是视频图片文字都有。我的是F:\file-service
 
-![image-20191223102943830](image\image-20191223102943830.png)
+![image-20191223102943830](image/image-20191223102943830.png)
 
 ##### 【2.2】配置tomcat
 
 在tomcat的安装目录中找到conf文件
 
-![image-20191223103151556](image\image-20191223103151556.png)
+![image-20191223103151556](image/image-20191223103151556.png)
 
 打开conf找到service.xml
 
-![image-20191223103350466](image\image-20191223103350466.png)
+![image-20191223103350466](image/image-20191223103350466.png)
 
 编辑service.xml
 
@@ -957,13 +957,13 @@ public class RestfulController {
 
 启动tomcat
 
-![image-20191223104305464](image\image-20191223104305464.png)
+![image-20191223104305464](image/image-20191223104305464.png)
 
 ##### 【2.3】访问测试
 
 访问 http://127.0.0.1/file-service/java.jpg 
 
-![image-20191223104418037](image\image-20191223104418037.png)
+![image-20191223104418037](image/image-20191223104418037.png)
 
 ### 3、SpringMVC文件上传案例
 
@@ -990,7 +990,7 @@ public class RestfulController {
 
 新建项目springmvc-day02-03upload
 
-![image-20191223153805348](image\image-20191223153805348.png)
+![image-20191223153805348](image/image-20191223153805348.png)
 
 pojo对象定义
 
@@ -1283,7 +1283,7 @@ public class FileObject {
 
 ##### 【2.4】编写FileObjectService
 
-![1597134572615](image\1597134572615.png)
+![1597134572615](image/1597134572615.png)
 
 FileObjectService
 
@@ -1557,9 +1557,9 @@ customer-list.jsp
 
 访问：
 
-![image-20191223154935623](image\image-20191223154935623.png)
+![image-20191223154935623](image/image-20191223154935623.png)
 
-![image-20191223155006934](image\image-20191223155006934.png)
+![image-20191223155006934](image/image-20191223155006934.png)
 
 #### 【3】小结
 
@@ -1599,7 +1599,7 @@ CommonsMulitpartResolver配置
 
 #### 【1】异常分类
 
-![image-20191223160158816](image\image-20191223160158816.png)
+![image-20191223160158816](image/image-20191223160158816.png)
 
 Throwable类有两个直接子类：
 
@@ -1651,7 +1651,7 @@ public void save(User user){
 
 在最初说springMVC执行流程时候，我们知道整个流程如下：
 
-![image-20191203172403022](image\image-20191203172403022.png)
+![image-20191203172403022](image/image-20191203172403022.png)
 
 也就是说调用处理器映射器==>处理器适配器==>视图解析器的整个过程中，M层（service、dao）发生异常时候，我们把异常throw出来，在抛到dispatcherServlet的时候
 
@@ -1931,11 +1931,11 @@ public class UpLoadController {
 
 访问 http://localhost:8080/platform/up-load/to-add 
 
-![image-20191223171913468](image\image-20191223171913468.png)
+![image-20191223171913468](image/image-20191223171913468.png)
 
 提交
 
-![image-20191223171941743](image\image-20191223171941743.png)
+![image-20191223171941743](image/image-20191223171941743.png)
 
 #### 【3】注解方式实现
 
@@ -2068,11 +2068,11 @@ public class UpLoadController extends BaseController {
 
 访问 http://localhost:8080/platform/up-load/to-add 
 
-![image-20191223171913468](image\image-20191223171913468.png)
+![image-20191223171913468](image/image-20191223171913468.png)
 
 提交
 
-![image-20191223171941743](image\image-20191223171941743.png)
+![image-20191223171941743](image/image-20191223171941743.png)
 
 ##### 【3.5】@ControllerAdvice
 
@@ -2174,7 +2174,7 @@ public class BaseController {
 
 #### 【3】拦截器执行流程
 
-![](image\image-20191227152507551.png)
+![](image/image-20191227152507551.png)
 
 ### 2、初识拦截器
 
@@ -2230,7 +2230,7 @@ public interface HandlerInterceptor {
 
 拷贝springmvc-day02-03upload新建项目springmvc-day02-04intercept
 
-![1586165139020](image\1586165139020.png)
+![1586165139020](image/1586165139020.png)
 
 ###### 【2.2.2】新建BasicIntercept
 
@@ -2304,11 +2304,11 @@ public class BasicIntercept implements HandlerInterceptor{
 
 访问 http://127.0.0.1:8080/platform/up-load/to-add
 
-![1586165285322](image\1586165285322.png)
+![1586165285322](image/1586165285322.png)
 
 修改preHandle()方法返回false
 
-![image-20200102110851936](image\image-20200102110851936.png)
+![image-20200102110851936](image/image-20200102110851936.png)
 
 #### 【3】小结
 
@@ -2462,7 +2462,7 @@ public class BasicInterceptB implements HandlerInterceptor {
 
 访问 http://127.0.0.1:8080/platform/up-load/to-add
 
-![image-20200102113459682](image\image-20200102113459682.png)
+![image-20200102113459682](image/image-20200102113459682.png)
 
 preHandle()全部返回true时，执行情况如下：
 
@@ -2503,7 +2503,7 @@ preHandle()全部返回true时，执行情况如下：
 
 访问 http://localhost:8081/platform/client 
 
-![image-20200102141548565](image\image-20200102141548565.png)
+![image-20200102141548565](image/image-20200102141548565.png)
 
 ```properties
 ClientController中有异常，对于过滤器链执行顺序是没有影响的，只是不执行postHandle方法
@@ -2515,7 +2515,7 @@ ClientController中有异常，对于过滤器链执行顺序是没有影响的�
 
 访问 http://localhost:8081/platform/client 
 
-![image-20200102114022597](image\image-20200102114022597.png)
+![image-20200102114022597](image/image-20200102114022597.png)
 
 ```properties
 如果本身定义的拦截器的preHandle()返回false，则中断执行，则不会进入此拦截器的postHandle和afterCompletion，及后续其他拦截器
@@ -2560,7 +2560,7 @@ ClientController中有异常，对于过滤器链执行顺序是没有影响的�
 
 拷贝springmvc-day02-04intercept项目springmvc-day02-05login-intercept结构如下：
 
-![image-20200102155145581](image\image-20200102155145581.png)
+![image-20200102155145581](image/image-20200102155145581.png)
 
 ##### 【2.2】配置拦截器
 
@@ -2674,15 +2674,15 @@ public class CustomerController {
 
 直接访问 http://127.0.0.1:8080/platform/up-load/to-add
 
-![image-20200102160214615](image\image-20200102160214615.png)
+![image-20200102160214615](image/image-20200102160214615.png)
 
 被LoginIntercept拦截到了 http://localhost:8081/platform/customer/to-login 
 
-![image-20200102160313548](image\image-20200102160313548.png)
+![image-20200102160313548](image/image-20200102160313548.png)
 
 点击提交
 
-![1586167190940](image\1586167190940.png)
+![1586167190940](image/1586167190940.png)
 
 #### 【3】小结
 
