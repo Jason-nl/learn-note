@@ -1,0 +1,8 @@
+nohup java \
+-Djava.rmi.server.hostname=192.168.12.129 \
+-Dcom.sun.management.jmxremote \
+-Dcom.sun.management.jmxremote.port=1099 \
+-Dcom.sun.management.jmxremote.authenticate=false \
+-Dcom.sun.management.jmxremote.ssl=false \
+-Xms200m -Xmx200m \
+-jar jvmDemo.jar >myDemo.log 2>&1 &

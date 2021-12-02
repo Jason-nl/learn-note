@@ -1,0 +1,91 @@
+    
+	// 定时任务  每个月的月底 
+	@Override
+    public void getSettlementsStatus() {
+		
+        List<ZySettlementEntity> settlements = zyCommonDao.getSettlementList("task","",""); // 
+		
+		
+		
+        if(CollectionUtils.isNotEmpty(settlements)){
+            ExecutorService executor = null;
+            CountDownLatch count = null;
+            try {
+                executor = Executors.newFixedThreadPool(settlements.size());//固定数量的线程
+                count = new CountDownLatch(settlements.size());//计数器
+                for (ZySettlementEntity entity : settlements){
+                    Runnable task  = new GetSettlementStatus(entity.getProvCode(),entity.getApplyNo(),entity.getMsgSeqId());
+                    executor.execute(task);
+                    count.countDown();
+                }
+                try {
+                    count.await();//阻塞主线程，等待所有子线程执行完毕
+                } catch (InterruptedException e) {
+                    log.error("阻塞异常，异常信息为：",e);
+                }
+                executor.shutdown();
+            } catch (Exception e) {
+                log.error("定时任务获取结算状态异常，异常信息为：",e);
+            } finally {
+                assert executor != null;
+                executor.shutdown();
+            }
+        }
+    }
+
+
+
+    /**
+     * 单个结算单获取结算状态
+     */
+    public class GetSettlementStatus implements Runnable{
+
+        private String provCode;//供应商编码
+        private Integer applyNo;//结算申请号
+        private String msgSeqId;//报文流水号
+
+        public GetSettlementStatus(String provCode,Integer applyNo,String msgSeqId){
+            this.applyNo = applyNo;
+            this.provCode = provCode;
+            this.msgSeqId = msgSeqId;
+        }
+
+        @Override
+        public void run() {
+            log.info("编号为"+provCode+"的供应商，结算申请号为"+applyNo+"的线程开始执行");
+            //1.初始化报文
+            ZySettlementStatusMsg statusMsg = new ZySettlementStatusMsg();
+            statusMsg.settlementStatus.msgHead = ZyUtil.setHeadInfo(ZyMsgFuncEnum.SETTLEMENT_STATUS_FUNC.getCode());
+            statusMsg.settlementStatus.msgBody.bodyEntity.setApplyNo(applyNo);
+            statusMsg.settlementStatus.msgBody.bodyEntity.setProvCode(provCode);
+            //2.生成报文
+            String xml = ZyUtil.toXML(statusMsg.settlementStatus);
+            //3.发送报文
+            String result = "";
+            try {
+                result = ZyUtil.doWebService(ZyConstants.SUBMIT_METHOD,xml);
+            } catch (Exception e) {
+                log.error("查询结算状态获取报文结果异常，异常信息为：",e);
+            }
+            //4.解析报文结果，成功结果入库
+            try {
+                //如果成功，需要更新数据库结算单对应的入账凭证号，支付状态和支付时间
+                statusMsg.settlementStatusSuccess = ZyUtil.fromXML(ZySettlementStatusMsg.QuerySettlementStatusSuccess.class,result);
+                ZySettlementEntity settlementEntity = new ZySettlementEntity();
+                settlementEntity.setMsgSeqId(msgSeqId);
+                settlementEntity.setPzUniNo(statusMsg.settlementStatusSuccess.getPzUniNo());
+                settlementEntity.setPayStatus(statusMsg.settlementStatusSuccess .getPayStatus());
+                settlementEntity.setPayDate(statusMsg.settlementStatusSuccess .getPayDate());
+                zyCommonDao.updateZySettlement(settlementEntity);
+            } catch (Exception e) {
+                //如果失败,打印失败结果,因为是定时任务处理，不做数据库记录
+                ZyReceiveFailEntity zyReceiveFailEntity = ZyUtil.fromXML(ZyReceiveFailEntity.class,result);
+                if(zyReceiveFailEntity == null){
+                    log.error("查询结算状态，既没有获取到成功反馈，也没有获取到失败反馈，请检查");
+                }else{
+                    log.error("查询结算状态失败，失败类型为:"+zyReceiveFailEntity.getType()+"，失败原因为："+zyReceiveFailEntity.getMsg());
+                }
+            }
+            log.info("编号为"+provCode+"的供应商，结算申请号为"+applyNo+"的线程执行完毕");
+        }
+    }

@@ -1,0 +1,101 @@
+设计方案
+1）定死扫表：定时任务轮询扫描订单表，比对时间，超时的订单挑出来。
+	优点：实现简单
+	缺点：数据量大的时候，不适用。
+
+2）延迟消费：定义一个队列用于延迟操作，在用户下单的时候，将订单放到这个队列中。
+
+	DelayQueue：实现简单，不需要借助外部中间件。可借助db事务，down机丢失，同时注意内存占用
+	消息队列，设置延迟并监听死信队列，注意消息堆积产生的监控报警 
+	
+	{
+		执行完方法以后才会消费下一条消息
+	}
+	redis过期回调，redis对内存空间的占用
+这里的案例我们采用延迟队列来实现。
+订单超时类
+public class OrderDto implements Delayed {
+    private int id; // 订单ID
+    private long invalid; // 超时时间
+
+    public OrderDto(int id, long deta){
+        this.id = id;
+        this.invalid = deta * 1000 + System.currentTimeMillis();
+    }
+
+    //倒计时，降到0时队列会吐出该任务
+    @Override
+    public long getDelay(TimeUnit unit) {
+        return invalid - System.currentTimeMillis();
+    }
+
+    @Override
+    public int compareTo(Delayed o) {
+        OrderDto o1 = (OrderDto) o;
+        return this.invalid - o1.invalid <= 0 ? -1 : 1;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public long getInvalid() {
+        return invalid;
+    }
+}
+
+定义监控类，启动守护线程，如果有超时任务，提交进线程池
+
+@Component
+public class OrderMonitor {
+    @Autowired
+    OrdersMapper mapper ;
+    //延时队列
+    final DelayQueue<OrderDto> queue = new DelayQueue<OrderDto>();
+    //任务池
+    ExecutorService service = Executors.newFixedThreadPool(3);
+
+    //投放延迟订单
+    public void put(OrderDto dto){
+        this.queue.put(dto);
+        System.out.println("put task:"+dto.getId());
+    }
+
+    //在构造函数中启动守护线程
+    public OrderMonitor(){
+        this.execute();
+        System.out.println("order monitor started");
+    }
+
+    //守护线程
+    public void execute(){
+        new Thread(()->{
+            while (true){
+                try {
+                    OrderDto dto = queue.take();
+                    System.out.println("take task:"+dto.getId());
+                    service.execute(new Task(dto));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+    }
+
+    //任务类
+    class Task implements Runnable{
+        OrderDto dto;
+        Task(OrderDto dto){
+            this.dto = dto;
+        }
+        @Override
+        public void run() {
+            Orders orders = new Orders();
+            orders.setId(dto.getId());
+            orders.setUpdatetime(new Date());
+            orders.setStatus(-1);
+            System.out.println("cancel order:"+orders.getId());
+            mapper.updateByPrimaryKeySelective(orders);
+        }
+    }
+}
