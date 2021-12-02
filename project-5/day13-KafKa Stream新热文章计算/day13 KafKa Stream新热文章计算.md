@@ -55,7 +55,7 @@
 
 - Hadoop 
 
-  ![1588518932145](assets\1588518932145.png)
+  ![1588518932145](assets/1588518932145.png)
 
 - Apche Storm/Flink
 
@@ -97,13 +97,13 @@ Kafka Stream的特点如下：
 - **源处理器（Source Processor）**：源处理器是一个没有任何上游处理器的特殊类型的流处理器。它从一个或多个kafka主题生成输入流。通过消费这些主题的消息并将它们转发到下游处理器。
 - **Sink处理器**：sink处理器是一个没有下游流处理器的特殊类型的流处理器。它接收上游流处理器的消息发送到一个指定的**Kafka主题**。
 
-![1588520036121](assets\1588520036121.png)
+![1588520036121](assets/1588520036121.png)
 
 ### 2.3 KStream&KTable
 
 （1）数据结构类似于map,如下图，key-value键值对
 
-![1588521104765](assets\1588521104765.png)
+![1588521104765](assets/1588521104765.png)
 
 （2）KStream
 
@@ -603,7 +603,7 @@ public class StreamListener implements KafkaStreamListener<KStream<String,String
 - 筛选出文章列表中最近5天热度较高的文章在每个频道的首页展示
 - 根据用户的行为（阅读、点赞、评论、收藏）实时计算热点文章
 
-![](assets\1599471047508.png)
+![](assets/1599471047508.png)
 
 ### 3.2 思路分析
 
@@ -627,11 +627,11 @@ public class StreamListener implements KafkaStreamListener<KStream<String,String
 
     在前端工程中的如下代码：
 
-    ![1602523130349](assets\1602523130349.png)
+    ![1602523130349](assets/1602523130349.png)
 
     这些就是首页的频道信息，其中的`id`就是与ad_channel表中的id要对应上。
     
-    ![1602566762256](assets\1602566762256.png)
+    ![1602566762256](assets/1602566762256.png)
 
 - 实时计算热点文章
 
@@ -952,15 +952,15 @@ public class HotArticleServiceTest {
 }
 ```
 
-测试完成以后，可以安装资料文件夹下的redis连接工具![1602582360990](assets\1602582360990.png)
+测试完成以后，可以安装资料文件夹下的redis连接工具![1602582360990](assets/1602582360990.png)
 
 新建连接
 
-![1602582439544](assets\1602582439544.png)
+![1602582439544](assets/1602582439544.png)
 
 查看数据
 
-![1602582470671](assets\1602582470671.png)
+![1602582470671](assets/1602582470671.png)
 
 4）定时任务创建
 
@@ -970,11 +970,11 @@ public class HotArticleServiceTest {
 
 新建执行器: leadnews-article-executor
 
-![1588663861049](assets\1588663861049.png)
+![1588663861049](assets/1588663861049.png)
 
 新建任务
 
-![1588663967517](assets\1588663967517.png)
+![1588663967517](assets/1588663967517.png)
 
 ② `article-service`中集成xxl-job
 
@@ -1096,7 +1096,7 @@ public class HotArticleConstants {
 
 如图：
 
-![1602524058339](assets\1602524058339.png)
+![1602524058339](assets/1602524058339.png)
 
 完整代码如下：
 
@@ -1160,7 +1160,7 @@ public class ApLikesBehaviorServiceImpl extends ServiceImpl<ApLikesBehaviorMappe
 
 如图：
 
-![1602524153350](assets\1602524153350.png)
+![1602524153350](assets/1602524153350.png)
 
 完整代码：
 
@@ -1238,7 +1238,7 @@ public class ApReadBehaviorServiceImpl extends ServiceImpl<ApReadBehaviorMapper,
 
 参考入门案例中的springboot集成kafka Stream ,把4个配置类拷贝过来，如下图
 
-![1588753883085](assets\1588753883085.png)
+![1588753883085](assets/1588753883085.png)
 
 `article-service`引入pom.xml依赖
 
