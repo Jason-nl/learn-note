@@ -106,7 +106,7 @@ SELECT * FROM student3 LIMIT 10,5;
 
 注：mysqld.exe是MySQL的主程序，服务器端。Mysql.exe是MySQL的命令行工具，客户端。
 
-   ![](img\DCL01.png)
+   ![](img/DCL01.png)
 
 #### 创建用户
 
@@ -140,11 +140,11 @@ create user 'u1'@'localhost' identified by '1234';
 
 1）先打开一个dos窗口，然后使用root用户登录，并创建一个普通的用户。
 
-![](img\DCL权限1.bmp)
+![](img/DCL权限1.bmp)
 
 2）然后再打开一个dos窗口，使用新创键的普通用户u1进行登录。
 
-![](img\DCL权限2.bmp)
+![](img/DCL权限2.bmp)
 
 需求2：创建u2用户可以在任何电脑上登录mysql服务器，密码为1234
 
@@ -158,22 +158,22 @@ create user 'u2'@'%' identified by '1234';
 
 1）使用root用户再创建一个新的普通用户u2
 
-![](img\DCL权限12.bmp)
+![](img/DCL权限12.bmp)
 
 2）使用新创键的用户u2登录
 
-![](img\DCL权限13.bmp)
+![](img/DCL权限13.bmp)
 
 **注：创建的用户名都在mysql数据库中的user表中可以查看到，密码经过了加密。**
 
-![](img\可视化工具中查看用户1.bmp)
+![](img/可视化工具中查看用户1.bmp)
 
 
 
 #### 授权用户
 
 用户创建之后，基本没什么权限！需要给用户授权
-![](img\DCL权限2.bmp)
+![](img/DCL权限2.bmp)
 
 **授权格式**：
 
@@ -196,7 +196,7 @@ GRANT 权限1, 权限2... ON 数据库名.表名 TO '用户名'@'主机名';
 
    A:使用root管理员创建一个heima01的数据库。
 
-   ![](img\DCL权限3.bmp)
+   ![](img/DCL权限3.bmp)
 
    B:使用root管理员给普通用户u1进行上述需求的授权。
 
@@ -204,21 +204,21 @@ GRANT 权限1, 权限2... ON 数据库名.表名 TO '用户名'@'主机名';
    语句：grant create,alter,insert,update,select on heima01.* to 'u1'@'localhost';
    ```
 
-   ![](img\DCL权限4.bmp)
+   ![](img/DCL权限4.bmp)
 
 2. 使用u1用户创建表person,并插入一条数据
 
-   ![](img\DCL权限5.bmp)
+   ![](img/DCL权限5.bmp)
 
 ```sql
 语句：create table person(age int);
 ```
 
-![](img\DCL权限6.bmp)
+![](img/DCL权限6.bmp)
 
 向person表中插入一条记录：
 
-![](img\DCL权限7.bmp)
+![](img/DCL权限7.bmp)
 
 ```sql
 语句：insert into person values(18);
@@ -226,7 +226,7 @@ GRANT 权限1, 权限2... ON 数据库名.表名 TO '用户名'@'主机名';
 
 注意：由于上述没有给普通用户授权删除表中的数据，所以当我们删除的时候，会出现如下错误：
 
-![](img\DCL权限8.bmp)
+![](img/DCL权限8.bmp)
 
 #### 撤销授权
 
@@ -252,11 +252,11 @@ REVOKE…ON…FROM	：撤销授权的关键字
 
   1) 首先使用root权限撤销用户u1的所有权限。
 
-  ![](img\DCL权限9.bmp)
+  ![](img/DCL权限9.bmp)
 
   2) 使用用户u1登录，操作heima01数据库中的表。
 
-  ![](img\DCL权限10.bmp)
+  ![](img/DCL权限10.bmp)
 
   
 
@@ -302,7 +302,7 @@ DROP USER '用户名'@'主机名';
   drop user 'u2'@'%';
   ```
 
-  ![](img\DCL权限14.bmp)
+  ![](img/DCL权限14.bmp)
 
 
 
@@ -323,7 +323,7 @@ mysqladmin -u root -p password 新密码
 3)使用新密码登录
 ```
 
-   ![](img\DCL权限15.bmp)
+   ![](img/DCL权限15.bmp)
 
 #### 修改普通用户密码
 
@@ -339,11 +339,11 @@ set password for '用户名'@'主机名' = password('新密码');
 
 使用root用户更改：
 
-![](img\DCL权限16.bmp)
+![](img/DCL权限16.bmp)
 
 2) 使用新密码登录，老密码登录不了
 
-![](img\DCL权限17.bmp)
+![](img/DCL权限17.bmp)
 
 ### 小结
 
@@ -441,15 +441,15 @@ create database heima;
 
   1）
 
-  ![img](img\wps12.jpg) 
+  ![img](img/wps12.jpg) 
 
   2）
 
-  ![img](img\wps13.jpg) 
+  ![img](img/wps13.jpg) 
 
   3）
 
-  ![img](img\wps14.jpg) 
+  ![img](img/wps14.jpg) 
 
    
 
@@ -459,19 +459,19 @@ create database heima;
 
   1）
 
-  ![img](img\wps15.jpg) 
+  ![img](img/wps15.jpg) 
 
   2）
 
-  ![img](img\wps16.jpg) 
+  ![img](img/wps16.jpg) 
 
   3）
 
-  ![img](img\wps17.jpg) 
+  ![img](img/wps17.jpg) 
 
   恢复后的结果：
 
-  ![img](img\wps18.jpg) 
+  ![img](img/wps18.jpg) 
 
 ## 5、数据库约束的概述
 
@@ -786,7 +786,7 @@ CREATE TABLE st9 (
 INSERT INTO st9 (id, NAME) VALUES (1, '刘德华');
 ```
 
-![](img\默认值.png)
+![](img/默认值.png)
 
 * 添加一条记录,不使用默认地址
 
@@ -827,7 +827,7 @@ INSERT INTO st9 VALUES (2, '张学友', '香港');
 
 例如：程序员和项目的关系、老师和学生，学生和课程，顾客和商品的关系等
 
-![](img\1.bmp)
+![](img/1.bmp)
 
 分析：
 
@@ -855,7 +855,7 @@ INSERT INTO st9 VALUES (2, '张学友', '香港');
 
 关系图总结:
 
-![](img\多对多关系图解.PNG)
+![](img/多对多关系图解.PNG)
 
 创建表的sql语句:
 
@@ -907,7 +907,7 @@ insert into coder_project values(3,2);
 
  缺点1: 我们是可以向中间表插入不存在的项目编号和程序员编号的。
 
-![](img\2.bmp)
+![](img/2.bmp)
 
 说明：在程序员和项目表中是不存在编号是30和20的，但是这里依然可以插入不存在的编号。这样做是不可以的，失去了中间表的意义。
 
@@ -917,11 +917,11 @@ insert into coder_project values(3,2);
 
 在中间表中是存在编号为1的程序员的：
 
-![](img\3.bmp)
+![](img/3.bmp)
 
 可是我们却可以删除程序员表coder中的编号为1的程序员：
 
-![](img\4.bmp)
+![](img/4.bmp)
 
 编号为1的程序员张三已经被我们删除，但是在中间表coder_project中仍然还存在编号为1的程序员，这样对于中间表没有意义了。
 
@@ -1003,25 +1003,25 @@ create table coder_project(
 
 1、清空上述三张表：
 
-![](img\5.bmp)
+![](img/5.bmp)
 
 2、增加外键约束：
 
-![](img\6.bmp)
+![](img/6.bmp)
 
 3、添加完外键约束以后，就会在可视化工具中的架构设计器上查看表之间的关系
 
 先选中表
 
-![](img\7.bmp)
+![](img/7.bmp)
 
 然后点击右下角：
 
-![](img\8.bmp)
+![](img/8.bmp)
 
 最后的表关系如下：
 
-![](img\9.bmp)
+![](img/9.bmp)
 
 3、向三张表中分别插入数据：
 
@@ -1046,11 +1046,11 @@ insert into coder_project values(3,1);
 
 A:执行以下语句：
 
-![](img\10.bmp)
+![](img/10.bmp)
 
 B:执行以下语句：
 
-![](img\11.bmp)
+![](img/11.bmp)
 
 再次执行上述语句的时候，发现报错了，而数据库表中的数据都没有改变，说明外键约束起到了作用。
 
@@ -1106,11 +1106,11 @@ insert into coder_project values(3,2);
 
 **需求1：修改主表coder表的id为3变为4.**
 
-![](img\12.bmp)
+![](img/12.bmp)
 
 **需求2：删除主表coder表的id是4的行数据。**
 
-![](img\12.bmp)
+![](img/12.bmp)
 
 **小结：**
 
@@ -1135,7 +1135,7 @@ insert into coder_project values(3,2);
 
 具体的关系如下图所示：
 
-![](img\表之间的一对多关系.PNG)
+![](img/表之间的一对多关系.PNG)
 
 注意：如果是一对多的关系，那么设计表的时候需要在多的一方增加一列，引入一的一方的主键作为自己的外键。
 
@@ -1149,7 +1149,7 @@ insert into coder_project values(3,2);
 
 建表原理如下图所示：
 
-![](img\一对一表设计图解.PNG)
+![](img/一对一表设计图解.PNG)
 
 
 
@@ -1197,7 +1197,7 @@ insert into coder_project values(3,2);
 
 2）关于设计学生成绩管理系统的数据表的E-R图如下所示：
 
-![](img\多表设计练习.PNG)
+![](img/多表设计练习.PNG)
 
 3）创建表sql语句：
 
@@ -1249,7 +1249,7 @@ create table studentcourse(
 
 创建表之后的结构：
 
-![](img\多表设计练习最后结果.PNG)
+![](img/多表设计练习最后结果.PNG)
 
 
 
@@ -1266,7 +1266,7 @@ create table studentcourse(
 以下案例是我们JavaWeb课程最后的小项目.我们拿出其中一部分需求,根据需求来设计数据库表之间的关系
 
 一个旅游线路分类中有多条旅游线路 , 一条旅游线路属于某一个分类 . 旅游线路表是多表 ,可以在多表上添加一个外键来执行分类表中的主键.
-![](img\1对多练习01.png)
+![](img/1对多练习01.png)
 
 <div style='background-color:#999;'>具体操作:<div>
 
@@ -1303,7 +1303,7 @@ CREATE TABLE tab_route (
 ### 多对多关系练习
 
 一个用户可以收藏多个线路，一个线路可以被多个用户收藏 ,所以用户和线路之间是多对多的关系.对于多对多的关系我们需要增加一张中间表来维护他们之间的关系
-![](img\多对多练习01.png)
+![](img/多对多练习01.png)
 
 <div style='background-color:#999;'>具体操作:<div>
 

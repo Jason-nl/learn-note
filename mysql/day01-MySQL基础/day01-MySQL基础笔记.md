@@ -283,29 +283,29 @@ mysql-installer-community-5.6.22.0.msi
 
 1.解压和安装：
 
-![img](img\wps1.jpg) 
+![img](img/wps1.jpg) 
 
-![img](img\wps2.jpg) 
+![img](img/wps2.jpg) 
 
 2.如果是第一次使用，会弹出一个提示框，需要输入注册码。注册码在如下文件夹中。
 
-![img](img\wps3.jpg) 
+![img](img/wps3.jpg) 
 
-![img](img\wps4.jpg) 
+![img](img/wps4.jpg) 
 
 3.输入完成之后，创建桌面快捷方式，然后打开该可视化界面软件。会出现如下图所示界面：
 
-![img](img\wps5.jpg) 
+![img](img/wps5.jpg) 
 
-![img](img\wps6.jpg) 
+![img](img/wps6.jpg) 
 
 点击链接：
 
-![img](img\wps7.jpg) 
+![img](img/wps7.jpg) 
 
 然后就会弹出如下界面：
 
-![img](img\wps8.jpg) 
+![img](img/wps8.jpg) 
 
 
 
@@ -318,7 +318,7 @@ mysql-installer-community-5.6.22.0.msi
 
 1、找到mysql的安装目录：在mysql的安装目录中。找到my.ini 文件。
 
-![image-20200609100334374](img\image-20200609100334374.png)
+![image-20200609100334374](img/image-20200609100334374.png)
 
 找到datadir 并且记录路径。 
 
@@ -921,15 +921,15 @@ CREATE TABLE 表名 LIKE 其他表;
 
 1.简单熟悉下可视化工具。
 
-![img](img\wps9.jpg) 
+![img](img/wps9.jpg) 
 
 2.一般的可视化工具，都能从界面看到 数据库-》数据库表-》表数据。
 
-![img](img\wps10.jpg) 
+![img](img/wps10.jpg) 
 
 6.在可视化工具中给内容添加注释快捷键是：ctrl+shift+c
 
-![img](img\wps11.jpg) 
+![img](img/wps11.jpg) 
 
 这样我们就简单熟悉了下可视化工具，接下来我们所有的操作都会在该可视化工具中进行操作。
 
@@ -1362,7 +1362,7 @@ insert into student2 select * from student;
 
 >注意：如果只想复制student表中name,age字段数据到student2表中使用如下格式
 >`insert into student2(name, age) SELECT name, age FROM student;`
->![蠕虫复制](img\蠕虫复制-1597202630793.png)
+>![蠕虫复制](img/蠕虫复制-1597202630793.png)
 
 
 
@@ -1418,7 +1418,7 @@ INSERT INTO student3(id,NAME,age,sex,address,math,english) VALUES (1,'马云',55
 SELECT * FROM student3 WHERE math>80;
 ```
 
-![](img\where查询01.png)
+![](img/where查询01.png)
 
 - 查询english分数小于或等于80分的学生
 
@@ -1426,7 +1426,7 @@ SELECT * FROM student3 WHERE math>80;
 SELECT * FROM student3 WHERE english<=80;
 ```
 
-![](img\where查询02.png)
+![](img/where查询02.png)
 
 - 查询age等于20岁的学生
 
@@ -1434,7 +1434,7 @@ SELECT * FROM student3 WHERE english<=80;
 SELECT * FROM student3 WHERE age=20;
 ```
 
-![](img\where查询03.png)
+![](img/where查询03.png)
 
 - 查询age不等于20岁的学生
 
@@ -1443,7 +1443,7 @@ SELECT * FROM student3 WHERE age!=20;
 SELECT * FROM student3 WHERE age<>20;
 ```
 
-![](img\where查询04.png)
+![](img/where查询04.png)
 
 #### 逻辑运算符
 
@@ -1459,7 +1459,7 @@ SELECT * FROM student3 WHERE age<>20;
 SELECT * FROM student3 WHERE  age>35 AND sex='男';
 ```
 
-![](img\where查询05.png)
+![](img/where查询05.png)
 
 - 查询age大于35或性别为男的学生(两个条件其中一个满足)
 
@@ -1467,7 +1467,7 @@ SELECT * FROM student3 WHERE  age>35 AND sex='男';
 SELECT * FROM student333 WHERE age>35 OR sex='男';
 ```
 
-![](img\where查询06.png)
+![](img/where查询06.png)
 
 - 查询id是1或3或5的学生
 
@@ -1475,7 +1475,7 @@ SELECT * FROM student333 WHERE age>35 OR sex='男';
 SELECT * FROM student3 WHERE id=1 OR id=3 OR id=5;
 ```
 
-![](img\where查询08.png)
+![](img/where查询08.png)
 
 **in关键字**
 语法格式：
@@ -1494,7 +1494,7 @@ SELECT * FROM 表名 WHERE 字段 in (值1, 值2, 值3);
 SELECT * FROM student3 WHERE id IN (1,3,5);
 ```
 
-![](img\where查询08.png)
+![](img/where查询08.png)
 
 - 查询id不是1或3或5的学生
 
@@ -1502,7 +1502,7 @@ SELECT * FROM student3 WHERE id IN (1,3,5);
 SELECT * FROM student3 WHERE id NOT IN (1,3,5);
 ```
 
-![](img\where查询07.png)
+![](img/where查询07.png)
 
 #### 范围
 
@@ -1522,7 +1522,7 @@ SELECT * FROM student3 WHERE english>=75 AND english<=90;
 SELECT * FROM student3 WHERE english BETWEEN 75 AND 90;
 ```
 
-![](img\where查询09.png)
+![](img/where查询09.png)
 
 ## 23、模糊查询like(掌握)
 
@@ -1530,7 +1530,7 @@ SELECT * FROM student3 WHERE english BETWEEN 75 AND 90;
 
 能够掌握模糊查询语法格式
 
-![](img\where查询11.png)
+![](img/where查询11.png)
 
 ### 讲解
 
@@ -1564,7 +1564,7 @@ name like '_张_'  只有中间是张，前面一个字，后面一个字。
 SELECT * FROM student3 WHERE NAME LIKE '马%';
 ```
 
-![](img\where查询10.png)
+![](img/where查询10.png)
 
 - 查询姓名中包含'德'字的学生
 
@@ -1572,7 +1572,7 @@ SELECT * FROM student3 WHERE NAME LIKE '马%';
 SELECT * FROM student3 WHERE NAME LIKE '%德%';
 ```
 
-![](img\where查询11.png)
+![](img/where查询11.png)
 
 - 查询姓马，且姓名有三个字的学生
 
@@ -1580,7 +1580,7 @@ SELECT * FROM student3 WHERE NAME LIKE '%德%';
 SELECT * FROM student3 WHERE NAME LIKE '马__';
 ```
 
-![](img\where查询12.png)
+![](img/where查询12.png)
 
 ### 小结
 
@@ -1595,7 +1595,7 @@ SELECT * FROM student3 WHERE NAME LIKE '马__';
 
 1. 能够掌握对查询的数据进行排序
 
-![](img\orderby01.png)
+![](img/orderby01.png)
 
 ### 讲解
 
@@ -1620,7 +1620,7 @@ SELECT 字段 FROM 表名 ORDER BY 排序的字段 [ASC|DESC];
 SELECT * FROM student3 ORDER BY age DESC;
 ```
 
-![](img\orderby01.png)
+![](img/orderby01.png)
 
 1.2.2 组合排序
 
@@ -1650,7 +1650,7 @@ SELECT 字段名 FROM 表名 WHERE 字段=值 ORDER BY 字段名1 [ASC|DESC], �
 SELECT * FROM student3 ORDER BY age DESC, math DESC;
 ```
 
-![](img\orderby02.png)
+![](img/orderby02.png)
 
 ### 小结
 
@@ -1690,7 +1690,7 @@ SELECT 聚合函数(字段) FROM 表名;
 SELECT COUNT(english) FROM student3;
 ```
 
-![](img\聚合函数01.png)
+![](img/聚合函数01.png)
 我们发现对于NULL的记录不会统计.
 
 统计数量常用:
@@ -1699,7 +1699,7 @@ SELECT COUNT(english) FROM student3;
 SELECT COUNT(*) FROM student3;
 ```
 
-![](img\聚合函数02.png)
+![](img/聚合函数02.png)
 
 - 查询年龄大于40的总数
 
@@ -1707,7 +1707,7 @@ SELECT COUNT(*) FROM student3;
 SELECT COUNT(*) FROM student3 WHERE age>40;
 ```
 
-![](img\聚合函数03.png)
+![](img/聚合函数03.png)
 
 - 查询数学成绩总分
 
@@ -1715,7 +1715,7 @@ SELECT COUNT(*) FROM student3 WHERE age>40;
 SELECT SUM(math) FROM student3;
 ```
 
-![](img\聚合函数04.png)
+![](img/聚合函数04.png)
 
 - 统计数学与英语的总和值。
 
@@ -1726,7 +1726,7 @@ SELECT SUM(math) FROM student3;
   select sum(math) + sum(english) from student3;
   ```
 
-  ![](img\总和值.bmp)
+  ![](img/总和值.bmp)
 
   方法二：
 
@@ -1735,7 +1735,7 @@ SELECT SUM(math) FROM student3;
   select sum(math + english) from student3;
   ```
 
-  ![](img\总和值2.bmp)
+  ![](img/总和值2.bmp)
 
   我们发现按照方法二的做法，结果是有问题的。结果少了86。
 
@@ -1761,7 +1761,7 @@ SELECT SUM(math) FROM student3;
 
   ​    ifnull(english,2) ===== english列的值不是null，返回实际值是3
 
-![](img\总和值3.bmp)
+![](img/总和值3.bmp)
 
 
 
@@ -1771,7 +1771,7 @@ SELECT SUM(math) FROM student3;
 SELECT MAX(math) FROM student3;
 ```
 
-![](img\聚合函数06.png)
+![](img/聚合函数06.png)
 
 - 查询数学成绩最低分
 
@@ -1779,7 +1779,7 @@ SELECT MAX(math) FROM student3;
 SELECT MIN(math) FROM student3;
 ```
 
-![](img\聚合函数07.png)
+![](img/聚合函数07.png)
 
 - 查询数学成绩平均分
 
@@ -1787,7 +1787,7 @@ SELECT MIN(math) FROM student3;
 SELECT AVG(math) FROM student3;
 ```
 
-![](img\聚合函数05.png)
+![](img/聚合函数05.png)
 
 ### 小结
 
@@ -1818,7 +1818,7 @@ SELECT AVG(math) FROM student3;
 
 说明：分组其实就是按列进行分类，然后可以对分类完的数据使用聚合函数进行运算。
 
-![]( img\分组图解1.bmp)
+![]( img/分组图解1.bmp)
 
 上述数据表示纸巾和洗衣粉属于不同品牌，但是价格是一样的。
 
@@ -1853,7 +1853,7 @@ insert into orders(id,product,price) values(6,'洗衣粉',60);
 
 按照商品分组，应该分成如下几组数据：
 
-![]( img\分组图解2.bmp)
+![]( img/分组图解2.bmp)
 
 分组之后查询的结果应该是：
 
@@ -1867,7 +1867,7 @@ insert into orders(id,product,price) values(6,'洗衣粉',60);
 
 最终答案：
 
-![]( img\分组图解3.bmp)
+![]( img/分组图解3.bmp)
 
 说明：先按照product进行分组，分组完成之后再给每一组进行求和。
 
@@ -1881,11 +1881,11 @@ select id,product,sum(price) from orders group by product;
 
 结果如下所示：
 
-![]( img\分组图解4.bmp)
+![]( img/分组图解4.bmp)
 
 原来的数据：
 
-![]( img\分组图解5.bmp)
+![]( img/分组图解5.bmp)
 
 说明：
 
@@ -1897,15 +1897,15 @@ select id,product,sum(price) from orders group by product;
 
 将纸巾id为2的price价格修改为20。
 
-![]( img\分组图解6.bmp)
+![]( img/分组图解6.bmp)
 
 然后修改查询语句，要求是先按照商品名分组，然后在按照价格进行分组。
 
-![]( img\分组图解7.bmp)
+![]( img/分组图解7.bmp)
 
 出现上述结果的原因是：
 
-![]( img\分组图解8.bmp)
+![]( img/分组图解8.bmp)
 
 说明：先按照商品名字进行分组，然后再按照商品的价格进行分组。
 
@@ -1919,11 +1919,11 @@ select id,product,sum(price) from orders group by product;
 
 书写的sql语句如下所示：
 
-![]( img\分组图解9.bmp)
+![]( img/分组图解9.bmp)
 
 可是执行上述sql语句时，会报如下错误：
 
-![]( img\分组图解10.bmp)
+![]( img/分组图解10.bmp)
 
 是因为上述的sql语句的使用有错误。
 
@@ -1941,11 +1941,11 @@ select id,product,sum(price) from orders group by product;
 
 修改后的sql语句如下所示：
 
-![]( img\分组图解11.bmp)
+![]( img/分组图解11.bmp)
 
 关于以上sql语句可以实现的最终结果的原因如下所示：
 
-![]( img\分组图解12.bmp)
+![]( img/分组图解12.bmp)
 
 总结：
 
@@ -1967,11 +1967,11 @@ group by 列名 having 条件
 
 sql语句举例：
 
-![]( img\分组图解13.bmp)
+![]( img/分组图解13.bmp)
 
 上述sql语句执行顺序如下图所示：
 
-![]( img\分组图解14.bmp)
+![]( img/分组图解14.bmp)
 
 select ... from ... where 条件1 ... group by ... having 条件2 order by...
 

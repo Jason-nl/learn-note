@@ -534,7 +534,7 @@ INSERT INTO emp(NAME,gender,salary,join_date,dept_id) VALUES('蜘蛛精','女',4
 
 
 
-![image-20200802103333568](img\image-20200802103333568.png)
+![image-20200802103333568](img/image-20200802103333568.png)
 
 
 
@@ -1064,11 +1064,11 @@ INSERT INTO salarygrade(grade,losalary,hisalary) VALUES
 
 
 
-![image-20200727092438331](img\image-20200727092438331.png)
+![image-20200727092438331](img/image-20200727092438331.png)
 
 说明：一个部门有多种职务，例如销售部有经理和销售员。一种职务可以在多个部门，例如文员可以在学工部和教研部。
 
-![](img\多表查询01-1597203787779.png)
+![](img/多表查询01-1597203787779.png)
 
 
 
@@ -1078,7 +1078,7 @@ INSERT INTO salarygrade(grade,losalary,hisalary) VALUES
 
 查询所有员工信息。显示员工编号，员工姓名，工资，职务名称，职务描述。
 
-![image-20200727093014584](img\image-20200727093014584.png)
+![image-20200727093014584](img/image-20200727093014584.png)
 
 具体操作：
    1.确定要查询哪些表：emp e, job j
@@ -1087,7 +1087,7 @@ INSERT INTO salarygrade(grade,losalary,hisalary) VALUES
    SELECT * FROM emp e INNER JOIN job j;
    ```
 
-   ![](img\多表查询02-1597203787780.png)
+   ![](img/多表查询02-1597203787780.png)
 
    2.确定表连接条件： e.job_id=j.id
 
@@ -1095,8 +1095,8 @@ INSERT INTO salarygrade(grade,losalary,hisalary) VALUES
    SELECT * FROM emp e INNER JOIN job j ON e.job_id=j.id;
    ```
 
-   ![](img\多表查询03-1597203787780.png)
-   ![]( img\多表查询04-1597203787780.png)
+   ![](img/多表查询03-1597203787780.png)
+   ![]( img/多表查询04-1597203787780.png)
 
    3.确定查询字段：员工编号，员工姓名，工资，职务名称，职务描述
 
@@ -1104,7 +1104,7 @@ INSERT INTO salarygrade(grade,losalary,hisalary) VALUES
    SELECT e.id, e.ename, e.salary, j.jname, j.description FROM emp e INNER JOIN job j ON e.job_id=j.id;
    ```
 
-   ![](img\多表查询05-1597203787780.png)
+   ![](img/多表查询05-1597203787780.png)
 
 
 #### 1.2 练习2
@@ -1115,14 +1115,14 @@ INSERT INTO salarygrade(grade,losalary,hisalary) VALUES
 
    1. 确定要查询哪些表，emp e, job j, dept d
 
-      ![image-20200727093902316]( img\image-20200727093902316.png)
+      ![image-20200727093902316]( img/image-20200727093902316.png)
 
    ```sql
    SELECT * FROM emp e INNER JOIN job j INNER JOIN dept d;
    ```
 
-   ![]( img\多表查询06-1597203787780.png)
-   ![]( img\多表查询07-1597203787780.png)
+   ![]( img/多表查询06-1597203787780.png)
+   ![]( img/多表查询07-1597203787780.png)
 
       2. 确定表连接条件 e.job_id=j.id and e.dept_id=d.id
 
@@ -1130,8 +1130,8 @@ INSERT INTO salarygrade(grade,losalary,hisalary) VALUES
    SELECT * FROM emp e INNER JOIN job j INNER JOIN dept d ON e.job_id=j.id AND e.dept_id=d.id;
    ```
 
-   ![]( img\多表查询08-1597203787781.png)
-   ![]( img\多表查询09-1597203787781.png)
+   ![]( img/多表查询08-1597203787781.png)
+   ![]( img/多表查询09-1597203787781.png)
 
       3. 确定查询字段：员工编号，员工姓名，工资，职务名称，职务描述，部门名称，部门位置
 
@@ -1143,13 +1143,13 @@ INSERT INTO salarygrade(grade,losalary,hisalary) VALUES
 FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = d.id;
    ```
 
-   ![]( img\多表查询10-1597203787781.png)
+   ![]( img/多表查询10-1597203787781.png)
 
 #### 1.3 练习3
 
 查询所有员工信息。显示员工姓名，工资，职务名称，职务描述，部门名称，部门位置，工资等级。
 
-![image-20200727204121609]( img\image-20200727204121609.png)
+![image-20200727204121609]( img/image-20200727204121609.png)
 
 具体操作：
       1. 确定要查询哪些表，emp e, job j, dept d, salarygrade s
@@ -1158,8 +1158,8 @@ FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = 
    SELECT * FROM emp e INNER JOIN job j INNER JOIN dept d INNER JOIN salarygrade s;
    ```
 
-   ![]( img\多表查询11-1597203787781.png)
-   ![]( img\多表查询12-1597203787781.png)
+   ![]( img/多表查询11-1597203787781.png)
+   ![]( img/多表查询12-1597203787781.png)
 
       2. 确定表连接条件 e.job_id=j.id and e.dept_id=d.id and e.salary between s.losalary and s.hisalary
 
@@ -1167,8 +1167,8 @@ FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = 
    SELECT * FROM emp e INNER JOIN job j INNER JOIN dept d INNER JOIN salarygrade s ON e.job_id=j.id AND e.dept_id=d.id AND e.salary BETWEEN s.losalary AND s.hisalary;
    ```
 
-   ![]( img\多表查询13-1597203787781.png)
-   ![]( img\多表查询14-1597203787781.png)
+   ![]( img/多表查询13-1597203787781.png)
+   ![]( img/多表查询14-1597203787781.png)
 
       3. 确定查询字段：员工姓名，工资，职务名称，职务描述，部门名称，部门位置，工资等级
 
@@ -1176,7 +1176,7 @@ FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = 
    SELECT e.ename, e.salary, j.jname, j.description, d.dname, d.loc, s.grade FROM emp e INNER JOIN job j INNER JOIN dept d INNER JOIN salarygrade s ON e.job_id=j.id AND e.dept_id=d.id AND e.salary BETWEEN s.losalary AND s.hisalary;
    ```
 
-   ![]( img\多表查询15-1597203787781.png)
+   ![]( img/多表查询15-1597203787781.png)
 
 ##### 1.3.1 多表查询规律总结
 
@@ -1198,8 +1198,8 @@ FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = 
      SELECT * FROM emp e INNER JOIN job j INNER JOIN dept d INNER JOIN salarygrade s;
    ```
 
-   ![]( img\多表查询11-1597203787781.png)
-   ![]( img\多表查询12-1597203787781.png)
+   ![]( img/多表查询11-1597203787781.png)
+   ![]( img/多表查询12-1597203787781.png)
 
       2. 确定表连接条件 e.job_id=j.id and e.dept_id=d.id and e.salary between s.losalary and s.hisalary
 
@@ -1207,11 +1207,11 @@ FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = 
    SELECT * FROM emp e INNER JOIN job j INNER JOIN dept d INNER JOIN salarygrade s ON e.job_id=j.id AND e.dept_id=d.id AND e.salary BETWEEN s.losalary AND s.hisalary;
    ```
 
-   ![]( img\多表查询13-1597203787781.png)
-   ![]( img\多表查询14-1597203787781.png)
+   ![]( img/多表查询13-1597203787781.png)
+   ![]( img/多表查询14-1597203787781.png)
 
    额外条件：只需要查询经理的信息（j.jname='经理'）
-   ![]( img\多表查询16-1597203787782.png)
+   ![]( img/多表查询16-1597203787782.png)
 
       3. 确定查询字段：员工姓名，工资，职务名称，职务描述，部门名称，部门位置，工资等级
 
@@ -1219,7 +1219,7 @@ FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = 
    SELECT e.ename, e.salary, j.jname, j.description, d.dname, d.loc, s.grade FROM emp e INNER JOIN job j INNER JOIN dept d INNER JOIN salarygrade s ON e.job_id=j.id AND e.dept_id=d.id AND e.salary BETWEEN s.losalary AND s.hisalary AND j.jname='经理';
    ```
 
-   ![]( img\多表查询17-1597203787782.png)
+   ![]( img/多表查询17-1597203787782.png)
 
 #### 1.5 练习5
 
@@ -1233,7 +1233,7 @@ FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = 
    SELECT dept_id, COUNT(*) FROM emp GROUP BY dept_id;
    ```
 
-   ![]( img\多表查询18-1597203787782.png)
+   ![]( img/多表查询18-1597203787782.png)
 
       2. 再和部门表连接查询
 
@@ -1241,8 +1241,8 @@ FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = 
    SELECT * FROM dept d INNER JOIN (SELECT dept_id, COUNT(*) FROM emp GROUP BY dept_id) e ON e.dept_id=d.id;
    ```
 
-   ![]( img\多表查询19-1597203787784.png)
-   ![]( img\多表查询20-1597203787784.png)
+   ![]( img/多表查询19-1597203787784.png)
+   ![]( img/多表查询20-1597203787784.png)
 
       3. 显示对应的字段
 
@@ -1250,9 +1250,9 @@ FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = 
    SELECT d.id, d.dname, d.loc, e.total 部门人数 FROM dept d INNER JOIN (SELECT dept_id, COUNT(*) total FROM emp GROUP BY dept_id) e ON e.dept_id=d.id;
    ```
 
-   ![]( img\多表查询21-1597203787784.png)
+   ![]( img/多表查询21-1597203787784.png)
    最终效果：
-   ![]( img\多表查询22-1597203787784.png)
+   ![]( img/多表查询22-1597203787784.png)
 
 
 
@@ -1321,7 +1321,7 @@ FROM emp e INNER JOIN job j ON e.job_id = j.id INNER JOIN dept d on e.dept_id = 
 
 **sql脚本与表关系**
 
-![image-20200617173911215](img\image-20200617173911215.png)
+![image-20200617173911215](img/image-20200617173911215.png)
 
 ```sql
 CREATE DATABASE demo3;

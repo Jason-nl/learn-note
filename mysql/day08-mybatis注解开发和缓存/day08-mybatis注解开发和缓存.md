@@ -176,7 +176,7 @@ SELECT * FROM tb_order WHERE order_number = '20140921003';
 SELECT * FROM tb_user WHERE id =1
 ~~~
 
-![image-20200608155355200](img\image-20200608155355200.png)
+![image-20200608155355200](img/image-20200608155355200.png)
 
 
 
@@ -273,7 +273,7 @@ User selectById(@Param("id") Long id);
 
 【结果】
 
-![image-20200608163416710](img\image-20200608163416710.png)
+![image-20200608163416710](img/image-20200608163416710.png)
 
 #### 2.2、一对多
 
@@ -387,7 +387,7 @@ List<Order> queryByUserId(@Param("userId") Long id);
 
 【结果】
 
-![image-20200608171934013](img\image-20200608171934013.png)
+![image-20200608171934013](img/image-20200608171934013.png)
 
 
 
@@ -558,7 +558,7 @@ public class CacheTest03 {
 
 1.查询条件不一致:
 
-![image-20200608221631047](img\image-20200608221631047.png)
+![image-20200608221631047](img/image-20200608221631047.png)
 
 
 
@@ -614,7 +614,7 @@ public class CacheTest03 {
 
 【结果】
 
-![image-20200608222222288](img\image-20200608222222288.png)
+![image-20200608222222288](img/image-20200608222222288.png)
 
 
 
@@ -661,7 +661,7 @@ public interface UserMapper {
 
 由于insert、update、delete会清空缓存，所以第二次查询时，依然会输出sql语句，即从数据库中查询。
 
-![image-20200608224431958](img\image-20200608224431958.png)
+![image-20200608224431958](img/image-20200608224431958.png)
 
 4、手动清除一级缓存；
 
@@ -714,7 +714,7 @@ public class CacheTest03 {
 
 在执行第二次查询之前清空缓存，再去执行查询。这时无法从缓存中命中，便会去执行sql从数据库中查询。
 
-![image-20200608224932372](img\image-20200608224932372.png)
+![image-20200608224932372](img/image-20200608224932372.png)
 
 
 
@@ -832,7 +832,7 @@ public class CacheTest03 {
 }
 ```
 
-![image-20200608232526979](img\image-20200608232526979.png)
+![image-20200608232526979](img/image-20200608232526979.png)
 
 测试结果：发现二级缓存没有起作用，第二次查询还是发送了sql
 
@@ -863,7 +863,7 @@ public class CacheTest03 {
 
 【结果】
 
-![image-20200608232909389](img\image-20200608232909389.png)
+![image-20200608232909389](img/image-20200608232909389.png)
 
 
 
@@ -887,7 +887,7 @@ public class CacheTest03 {
     }
 ~~~
 
-![image-20200608233348480](img\image-20200608233348480.png)
+![image-20200608233348480](img/image-20200608233348480.png)
 
 测试结果：发现一旦进行了增删改操作，二级缓存也被清空了。
 
