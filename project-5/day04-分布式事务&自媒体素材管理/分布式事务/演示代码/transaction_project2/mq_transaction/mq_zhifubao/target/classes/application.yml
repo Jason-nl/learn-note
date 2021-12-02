@@ -1,0 +1,19 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: yuebao
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/alipay_zhifubao?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  main:
+    allow-bean-definition-overriding: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirm-type: correlated  # 开启确认机制回调 必须配置这个才会确认回调
+    publisher-returns: true # 开启return机制回调

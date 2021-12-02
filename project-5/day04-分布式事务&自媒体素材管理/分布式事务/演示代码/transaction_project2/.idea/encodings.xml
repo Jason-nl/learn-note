@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/at_transaction/yuebao-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/at_transaction/zhifubao-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mq_transaction/mq_yuebao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mq_transaction/mq_zhifubao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/seate_configuration/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tcc_transaction/tcc_yuebao/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tcc_transaction/tcc_zhifubao/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

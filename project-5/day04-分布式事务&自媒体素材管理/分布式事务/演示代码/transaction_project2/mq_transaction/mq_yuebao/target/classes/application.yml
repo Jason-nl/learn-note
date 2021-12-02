@@ -1,0 +1,25 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: yuebao
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/alipay_yuebao?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  main:
+    allow-bean-definition-overriding: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      simple:
+        acknowledge-mode: auto #自动确认    manual #手动确认
+        retry:
+          enabled: false # 是否开启重试功能
+  redis:
+    host: 127.0.0.1
+    port: 6379

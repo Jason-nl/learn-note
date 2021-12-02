@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seate_configuration" />
+        <module name="mq_zhifubao" />
+        <module name="zhifubao-service" />
+        <module name="mq_yuebao" />
+        <module name="tcc_yuebao" />
+        <module name="yuebao-service" />
+        <module name="tcc_zhifubao" />
+        <module name="xa_transaction" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="at_transaction" target="1.8" />
+      <module name="mq_transaction" target="1.8" />
+      <module name="mq_yuebao" target="1.8" />
+      <module name="mq_zhifubao" target="1.8" />
+      <module name="seate_configuration" target="1.8" />
+      <module name="tcc_transaction" target="1.8" />
+      <module name="tcc_yuebao" target="1.8" />
+      <module name="tcc_zhifubao" target="1.8" />
+      <module name="xa_transaction" target="1.5" />
+      <module name="yuebao-service" target="1.8" />
+      <module name="zhifubao-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="at_transaction" options="-parameters" />
+      <module name="mq_yuebao" options="-parameters" />
+      <module name="mq_zhifubao" options="-parameters" />
+      <module name="seate_configuration" options="-parameters" />
+      <module name="tcc_yuebao" options="-parameters" />
+      <module name="tcc_zhifubao" options="-parameters" />
+      <module name="yuebao-service" options="-parameters" />
+      <module name="zhifubao-service" options="-parameters" />
+    </option>
+  </component>
+</project>

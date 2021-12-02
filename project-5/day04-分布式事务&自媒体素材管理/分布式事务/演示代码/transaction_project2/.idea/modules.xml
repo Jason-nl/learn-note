@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/at_transaction/at_transaction.iml" filepath="$PROJECT_DIR$/at_transaction/at_transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mq_transaction/mq_transaction.iml" filepath="$PROJECT_DIR$/mq_transaction/mq_transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mq_transaction/mq_yuebao/mq_yuebao.iml" filepath="$PROJECT_DIR$/mq_transaction/mq_yuebao/mq_yuebao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mq_transaction/mq_zhifubao/mq_zhifubao.iml" filepath="$PROJECT_DIR$/mq_transaction/mq_zhifubao/mq_zhifubao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/seate_configuration/seate_configuration.iml" filepath="$PROJECT_DIR$/seate_configuration/seate_configuration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tcc_transaction/tcc_transaction.iml" filepath="$PROJECT_DIR$/tcc_transaction/tcc_transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tcc_transaction/tcc_yuebao/tcc_yuebao.iml" filepath="$PROJECT_DIR$/tcc_transaction/tcc_yuebao/tcc_yuebao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tcc_transaction/tcc_zhifubao/tcc_zhifubao.iml" filepath="$PROJECT_DIR$/tcc_transaction/tcc_zhifubao/tcc_zhifubao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/transaction_project2.iml" filepath="$PROJECT_DIR$/.idea/transaction_project2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xa_transaction/xa_transaction.iml" filepath="$PROJECT_DIR$/xa_transaction/xa_transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/at_transaction/yuebao-service/yuebao-service.iml" filepath="$PROJECT_DIR$/at_transaction/yuebao-service/yuebao-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/at_transaction/zhifubao-service/zhifubao-service.iml" filepath="$PROJECT_DIR$/at_transaction/zhifubao-service/zhifubao-service.iml" />
+    </modules>
+  </component>
+</project>
