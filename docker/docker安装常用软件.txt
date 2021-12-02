@@ -1,0 +1,31 @@
+1.安装mysql
+    a.首先创建一个network
+        docker network create -d bridge my-net
+        将一个已经运行的容器连接该网络
+        docker network connect my-net mm
+        为了测试网络，我们可以执行命令：
+        ping mn
+
+    b.准备镜像
+        docker pull mysql:5.7.25
+    c.挂载本地目录
+            1）.创建一个用户
+                useradd leyou
+            2）.设置密码
+                passwd leyou
+            3）.进入用户目录
+                cd /home/leyou
+            4）.创建mysql目录
+                mkdir mysql
+            5）.配置并运行容器
+                ```shell
+                    docker run \
+ -p 3306:3306 \
+ --name mysql \
+ -v $PWD/conf:/etc/mysql/conf.d \
+ -v $PWD/data:/var/lib/mysql \
+ -e MYSQL_ROOT_PASSWORD=123 \
+ --privileged \
+ -d \
+ mysql:5.7.25
+                ```                
